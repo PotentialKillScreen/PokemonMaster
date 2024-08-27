@@ -1,0 +1,51 @@
+Linkmulti = amount
+LINK = "small_tokens_2.ods"
+
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 25.4
+[card_height] = 25.4
+CARDSIZE=[card_width], [card_height]
+[grid_thickness] = 0.5
+MARGINS = 20,20,40.20,20
+OVERSAMPLE=2
+dcdcdc
+;Ranges
+[all] = autorange({(Name)})
+
+
+[col_grey] = #f0ede2
+[col_bike] = #f7f6a5
+
+[col_white] = #ffffff
+
+[col_grey] = #dcdcdc
+[col_orange] = #f8c870
+
+
+[col_b] = #396e9e
+[col_y] = #fdb825
+[col_g] = #1e7331
+[col_r] = #9a1115
+
+
+[image_size] = {(0.75*25.4)+[increase_size]}
+[image_x] = {([card_width] - [image_size])*0.5}
+[image_y] = {([card_width] - [image_size])*0.5}
+
+Rectangle = [all],0,0,100%,100%, [col_[background_color]]
+
+image = [all],[image_pl], [image_x],[image_y],[image_size],[image_size],0,PT
+font = Ubuntu, 11,TB,#000000
+Text = [all],[Text],15%,20%,70%,60%,center,wwcenter,
+;ELLIPSE=[all], 0.125*[card_width], 0.125*[card_height], 0.75*[card_width], 0.75*[card_height], #399999,Empty
+
+
+
+;display="symbols/tokens/small/cancel.png",14,14
+
+[backs] = rangemul(2,1,11,8,12,20,32,16,48,12,60,1,81,20,86,1,87,1,88,1,89,1)
+Duplex ="1,3-10,12-31,32-47,48-59,60,61-80,82,83,84,85",[backs]
+print= Duplex
