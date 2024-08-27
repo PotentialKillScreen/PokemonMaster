@@ -1,0 +1,210 @@
+LINK = "Gyms.ods!sheet1"
+LINK = "Gyms.ods!sheet2"
+;Settings
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 50.8
+[card_height] = 50.8
+[card_width] = 46
+[card_height] = 46
+CARDSIZE=[card_width], [card_height]
+[grid_thickness] = 0.5
+posS = 0,0,0,0
+OVERSAMPLE=2
+
+HTMLIMAGE = , (normal), Symbols/Types/Vanilla/Normal.png, 3.5,3.5,PM
+;Constants
+
+[gym_range] = autorange({(leader)})
+[power_range] = autorange({(number)})
+[gym_background_range] = 9
+[power_background_range] = 17
+
+[no_giovanni_range] = 1-7
+[giovanni_range] = 8
+[reward_x_pos] = 34%
+[reward_y_pos] = 3.2%
+
+[reward_height] = 4
+[reward_font] = [reward_height] *2.5
+
+[Masterball_x] = 54%
+[Masterball_y] = 2%
+[Masterball_size] = 12%
+
+[trainer_x_pos] = 35%
+[trainer_y_pos] = [reward_y_pos]+[reward_height] - 1%
+[trainer_x_size] = 30%
+[trainer_y_size] = 26%
+
+
+
+[poke1_x_pos] = 5%
+[poke1_y_pos] = 18%
+[poke1_x_size] = 40%
+[poke1_y_size] = 40%
+[poke_1_ugly_x] = 2.5%
+
+[poke2_x_pos] = 100%-[poke1_x_pos]-[poke1_x_size]
+[poke2_y_pos] = [poke1_y_pos]
+[poke2_x_size] = [poke1_x_size]
+[poke2_y_size] = [poke1_y_size]
+
+[poke3_x_pos] = 25%
+[poke3_y_pos] = [trainer_y_pos]+ [trainer_y_size] -7%
+[poke3_x_size] = 50%
+[poke3_y_size] = 50%
+
+
+[type_size_y] = 17%
+[type_size_x] = [type_size_y]*1.37
+
+
+[1_type_x_pos] = 10%
+[1_type_y_pos] = 54%
+
+[2_type_x_pos] = 100%-[1_type_x_pos] - [type_size_x]
+[2_type_y_pos] = [1_type_y_pos]
+
+[3_type_x_pos] = 50% -[type_size_x]/2
+[3_type_y_pos] = 70%
+
+[heart_y_offset] = 2%
+[heart_x_offset] = 0.3%
+
+
+[1_heart_x_pos] = [1_type_x_pos] + [heart_x_offset]
+[1_heart_y_pos] = [1_type_y_pos] + [heart_y_offset]
+
+[2_heart_x_pos] = [2_type_x_pos] + [heart_x_offset]
+[2_heart_y_pos] = [2_type_y_pos] + [heart_y_offset]
+
+
+[3_heart_x_pos] = [3_type_x_pos] + [heart_x_offset]
+[3_heart_y_pos] = [3_type_y_pos] + [heart_y_offset]
+
+[heart_size_x] = [type_size_y]
+[heart_size_y] = [heart_size_x] * 0.819
+
+[Damage_size_x] = 9.5%
+[Damage_size_y] = 9.5%
+
+[damage_margin] = [damage_size_x]*1.15
+
+[type_damage_margin] = 1%
+
+[1_damage_y_pos] = [1_type_y_pos] + [type_size_y] + [type_damage_margin]
+[2_damage_y_pos] = [2_type_y_pos] + [type_size_y] + [type_damage_margin]
+[3_damage_y_pos] = [3_type_y_pos] + [type_size_y] + [type_damage_margin]
+
+[1_low_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2)
+[2_low_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2)
+
+[1_high1_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) -[damage_margin]/2
+[1_high2_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) +[damage_margin]/2
+
+[2_high1_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) -[damage_margin]/2
+[2_high2_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) +[damage_margin]/2
+
+[3_low_damage_x_pos] = [3_type_x_pos] + [type_size_x]/2-([damage_size_x]/2)
+
+[3_high1_damage_x_pos] = [3_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) -[damage_margin]/2
+[3_high2_damage_x_pos] = [3_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) +[damage_margin]/2
+
+HTMLIMAGE = , (masterball), Symbols/Other/masterball.png, [masterball_size],[masterball_size],PTM
+
+
+
+
+
+Image = [gym_range], [trainer_image], [trainer_x_pos], [trainer_y_pos], [trainer_x_size],[trainer_y_size],0,TP
+
+
+
+
+
+
+Image = [gym_range], [poke_image_1], [poke1_x_pos] - [poke_1_ugly_x], [poke1_y_pos], [poke1_x_size],[poke1_y_size],0,TP
+Image = [gym_range], [poke_image_2], [poke2_x_pos], [poke2_y_pos], [poke2_x_size],[poke2_y_size],0,TP
+Image = [gym_range], [poke_image_3], [poke3_x_pos], [poke3_y_pos], [poke3_x_size],[poke3_y_size],0,TP
+image = [gym_range], [type_1_image], [1_type_x_pos], [1_type_y_pos], [type_size_x], [type_size_y],0,TP
+if = ([n_damage_1] = 1)
+    image = [gym_range], [Damage_1_1],[1_low_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+elseif = ([n_damage_1] = 2)
+    image = [gym_range], [Damage_1_1],[1_high1_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    image = [gym_range], [Damage_1_2],[1_high2_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+endif
+image = [gym_range],[health_1_img],[1_heart_x_pos],[1_heart_y_pos],[heart_size_x],[heart_size_y],0,TP
+
+
+image = [gym_range], [type_2_image], [2_type_x_pos], [2_type_y_pos], [type_size_x], [type_size_y],0,TP
+if = ([n_damage_2] = 1)
+    image = [gym_range], [Damage_2_1],[2_low_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+elseif = ([n_damage_2] = 2)
+    image = [gym_range], [Damage_2_1],[2_high1_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    image = [gym_range], [Damage_2_2],[2_high2_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+endif
+image = [gym_range],[health_2_img],[2_heart_x_pos],[2_heart_y_pos],[heart_size_x],[heart_size_y],0,TP
+
+
+image = [gym_range], [type_3_image], [3_type_x_pos], [3_type_y_pos], [type_size_x], [type_size_y],0,TP
+if = ([n_damage_3] = 1)
+    image = [gym_range], [Damage_3_1],[3_low_damage_x_pos],[3_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+elseif = ([n_damage_3] = 2)
+    image = [gym_range], [Damage_3_1],[3_high1_damage_x_pos],[3_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    image = [gym_range], [Damage_3_2],[3_high2_damage_x_pos],[3_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+Endif
+image = [gym_range],[health_3_img],[3_heart_x_pos],[3_heart_y_pos],[heart_size_x],[heart_size_y],0,TP
+
+FONT=Ubuntu,[reward_font],TIB,#000000
+
+
+HTMLText = [No_giovanni_range], <p>TM [TM] / [Money_reward]$</p>,[reward_x_pos], [reward_y_pos], 100%, [reward_height],,0,T
+HTMLText = [giovanni_range], <p>(Masterball)</p>,[masterball_x], [masterball_y], [masterball_size], [masterball_size],,0,T
+
+if= ([background] = 1)
+    image =[gym_background_range],Symbols/Backgrounds/background_gym.png, 0,0,100%,100%
+Endif
+
+
+[power_name_x] = 0%
+[power_name_y] = 22%
+[ugly_x] = 0%
+
+[power_name_height] = 4.3
+[power_name_font] = [power_name_height] * 2.5
+
+[power_text_height] = 4
+[power_text_font] = [power_text_height] * 2.5
+
+[power_text_x] = 10%
+[power_text_y] = [power_name_y] + [Power_name_height]
+HTMLIMAGE = , (health), Symbols/Other/heart.png,[power_text_height],[Power_text_height],PM
+
+
+rectangle = [power_range], 0,0,100%,100%,#b97a57
+
+
+HTMLfont = power_name_htmlfont, Arial, [power_name_font], B,#000000, Center
+FONT=Ubuntu,[power_name_font],TIB,#000000
+HTMLTEXT = [power_range], "[power_name]", [power_name_x] + [ugly_x], [power_name_y], 100%, [power_name_font], #FFFFFF,0 , T,100,power_name_htmlfont
+
+HTMLfont = power_text_htmlfont, Arial, [power_text_font], ,#000000, Center
+HTMLTEXT = [power_range], "[power_text]", [power_text_x], [power_text_y], 100%-2*[power_text_x], 100%, #FFFFFF,0 , T,100,power_text_htmlfont
+
+rectangle = [power_background_range], 0,0,100%,100%,#b97a57
+image =[power_background_range],Symbols/Backgrounds/background_battle_ability.png, 10%,10%,80%,80%
+;ELLIPSE=, 0, 0, [card_width], [card_height], #000000, Empty,[grid_thickness]
+BORDER = NONE
+
+;Display = "Decks/big_tokens/tts_gym_tokens.png",1,8
+;Display = "Decks/big_tokens/giovanni.png",8,8
+;Display = "Decks/Powers/tts_power_tokens.png",10,17
+;[backs] = rangemul(9,7,17,7)
+;Duplex ="1-7,10-16",[backs]
+;print= Duplex
+;print = "1-7,10-16"
+;zoom =100
+
