@@ -1,0 +1,176 @@
+LINK = "Pokemon_cards2.ods!Pokemon_cards_1"
+LINK = "Pokemon_cards2.ods!Sheet2"
+;LINK = "troubleshooting.ods"
+;Settings
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 63
+[card_height] = 41
+CARDSIZE=[card_width], [card_height]
+OVERSAMPLE=2
+Margins = 10,10,10,50
+[back_range] = autorange({(extra)})
+[learn]=autorange({(Learnable)})
+
+
+
+
+
+[all] = ({[Extra]})-{([Learnable])}
+[Image_trans] = 65
+
+[Name_height]=5.2
+[Name_font] = [Name_height]*2.5
+
+
+[type_size] = [Name_height] + 0%
+[cc_size] = [type_size] + 0.5%
+
+[Name_y_pos] = 3%
+[Name_x_pos] = 3%
+
+[Text_height] = 5.2
+[Text_font] = [Text_height] * 2.5
+
+[damage_size] = [text_height] -2.5%
+
+[Text_y_pos] = 7%
+[Text_x_pos] = [Name_x_pos]
+
+[Range_x_pos] = 66%
+
+
+[back_name_font] = 13
+[back_text_font] = 12
+
+[back_name_x] = 0%
+[back_name_y] = 5%
+[Back_name_w] = 100%
+
+
+[back_text_x] = 3%
+[back_text_y] = 20%
+[back_text_w] = 100%-[back_text_x]*2
+[back_text_h] = 100%-[back_text_y]
+
+HTMLIMAGE = , (electric_t), Symbols/Types/Vanilla/Electric.png, [type_size],[type_size],PM
+HTMLIMAGE = , (fire_t), Symbols/Types/Vanilla/Fire.png, [type_size],[type_size],PM
+HTMLIMAGE = , (flying_t), Symbols/Types/Vanilla/Flying.png, [type_size],[type_size],PM
+HTMLIMAGE = , (grass_t), Symbols/Types/Vanilla/Grass.png, [type_size],[type_size],PM
+HTMLIMAGE = , (normal_t), Symbols/Types/Vanilla/Normal.png, [type_size],[type_size],PM
+HTMLIMAGE = , (psychic_t), Symbols/Types/Vanilla/psychic.png, [type_size],[type_size],PM
+HTMLIMAGE = , (rock_t), Symbols/Types/Vanilla/rock.png,[type_size],[type_size],PM
+HTMLIMAGE = , (water_t), Symbols/Types/Vanilla/water.png, [type_size],[type_size],PM
+
+HTMLIMAGE = , (electric), Symbols/Types/Vanilla/Electric.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (fire), Symbols/Types/Vanilla/Fire.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (flying), Symbols/Types/Vanilla/Flying.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (grass), Symbols/Types/Vanilla/Grass.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (normal), Symbols/Types/Vanilla/Normal.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (psychic), Symbols/Types/Vanilla/psychic.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (rock), Symbols/Types/Vanilla/rock.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (water), Symbols/Types/Vanilla/water.png, [damage_size],[damage_size],PM
+
+HTMLIMAGE = , (2_line), Symbols/Ranges/line2.png, 10.5,[damage_size],PM
+HTMLIMAGE = , (3_line), Symbols/Ranges/line3.png, 14,[damage_size],PM
+HTMLIMAGE = , (4_line), Symbols/Ranges/line4.png, 17.5,[damage_size],PM
+HTMLIMAGE = , (5_line), Symbols/Ranges/line5.png, 21,[damage_size],PM
+HTMLIMAGE = , (6_line), Symbols/Ranges/line6.png, 24.5,[damage_size],PM
+HTMLIMAGE = , (7_line), Symbols/Ranges/line7.png, 28,[damage_size],PM
+
+HTMLIMAGE = , (3_hex), Symbols/Ranges/s.png,[damage_size]+1,[damage_size]+1,PMD
+HTMLIMAGE = , (circle), Symbols/Ranges/l.png, [damage_size]+2,[damage_size]+2,PMD
+HTMLIMAGE = , (half), Symbols/Ranges/half_circle.png, [damage_size]+1,[damage_size]+1,PMD
+HTMLIMAGE = , (around), Symbols/Ranges/a.png,[damage_size],[damage_size],PMD
+
+
+HTMLIMAGE = , (cc), Symbols/Other/timeglass.png, [cc_size],[cc_size],PM
+HTMLIMAGE = , (health), Symbols/Other/heart.png,[damage_size],[damage_size],PM
+HTMLIMAGE = , (token), Symbols/Other/token.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (slash), Symbols/Other/slash.png, [damage_size],[damage_size],PM
+HTMLIMAGE = , (-), Symbols/Other/minus.png, 2,3.5,PM
+HTMLIMAGE = , (damage), Symbols/Other/damage.png, [damage_size]*1.5,[damage_size],PM
+HTMLIMAGE = , (grass_x), Symbols/Other/grass_x.png,[damage_size]+2,[damage_size]+2,PM
+HTMLIMAGE = , (rock_x), Symbols/Other/rock_x.png,[damage_size]+2,[damage_size]+2,PM
+HTMLIMAGE = , (psychic_x), Symbols/Other/psychic_x.png,[damage_size]+2,[damage_size]+2,PM
+HTMLIMAGE = , (+1), Symbols/other/+1.png,[Text_height],[Text_height],PM
+
+HTMLIMAGE = , (tree), Symbols/other/tree.png, [name_height],[name_height],PM
+HTMLIMAGE = , (brown_node), Symbols/other/brown_node.png, [name_height],[name_height],PM
+HTMLIMAGE = , (pink_node), Symbols/other/pink_node.png, [name_height],[name_height],PM
+HTMLIMAGE = , (blue_token), Symbols/other/blue_token.png, [name_height],[name_height],PM
+HTMLIMAGE = , (green_token), Symbols/other/green_token.png, [name_height],[name_height],PM
+
+
+image = [back_range],[base_img],0,0,100%,100%
+HTMLFONT=font_back_name,arial,[back_name_font],B,#000000,center
+HTMLFONT=font_back_text,arial,[back_text_font],B,#000000,center
+;HTMLFONT=font_name2,arial,[Name_font],,#000000,Left
+;htmlmargins=font_back_text,[back_text_y],[back_text_x],[back_text_x],0,center
+
+HTMLTEXT = [back_range], [back_name], [back_name_x], [back_name_y], [back_name_w], 100%,#FFFFFF,0,T,100,font_back_name
+
+HTMLTEXT=  [back_range],[back_text],[back_text_x],[back_text_y],[back_text_w],[back_text_h],#FFFFFF,0,T,100,font_back_text
+
+
+HTMLFONT=font_name,arial,[Name_font],B,#000000,Left
+FONT=Arial,[Text_font],TIB,#000000
+;HTMLFONT=font_text,arial,[Text_font],B,#000000,Left
+HTMLTEXT = [learn], <p>[TM_damage_help]</p>, [text_x_pos], [text_y_pos], 100%, 100%,#FFFFFF,0,T,100,font_name
+
+
+
+
+
+;IF = ([learnable] = 1)
+Image = [learn], [tm_img],0,0, 100%,100%, 0,P,[image_trans]
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+
+
+;HTMLFONT=font_name2,arial,[Name_font],,#000000,Left
+HTMLTEXT = [learn], [TM_name], [name_x_pos], [name_y_pos], 100%, [name_height],#FFFFFF,0,T,100,font_name
+
+FONT=Arial,[Text_font],TIB,#000000
+;HTMLFONT=font_text,arial,[Text_font],B,#000000,Left
+HTMLTEXT = [learn], <p>[TM_damage_help]</p>, [text_x_pos], [text_y_pos], 100%, 100%,#FFFFFF,0,T,100,font_name
+HTMLTEXT = [learn], <p>Range: [attack_range_out]</p>, [range_x_pos], [text_y_pos], 100%, 100%,#FFFFFF,0,T,100,font_name
+FONT=Arial,[Text_font],TI,#000000
+HTMLTEXT = [learn], <p><br>[tm_text]</p>, [text_x_pos], [text_y_pos]+1, 97%, 100%,#FFFFFF,0,T,100,font_name
+
+;endif
+Display = "decks/attacks/tts_hm_tm_back.png",1,10
+Display = "decks/attacks/tts_tm_back.png",11,11
+Display = "decks/attacks/tts_hm_gym.png",12,21
+Display = "decks/attacks/tts_tm.png",22,55,10
+Display = "decks/hm/tts_hm_tm_back.png",21,54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zoom = 100
