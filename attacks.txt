@@ -1,5 +1,5 @@
-LINK = "Pokemon_cards2.ods!Pokemon_cards_1"
-LINK = "Pokemon_cards2.ods!Sheet2"
+LINK = "Pokemon_cards.ods!Pokemon_cards_1"
+LINK = "Pokemon_cards.ods!Sheet2"
 ;LINK = "troubleshooting.ods"
 ;Settings
 UNIT = MM
