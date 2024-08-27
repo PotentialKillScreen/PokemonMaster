@@ -14,7 +14,7 @@ This includes
 - The [code](https://github.com/PotentialKillScreen/PokemonMaster/blob/main/tiny_tokens.txt) and [spreadsheet](https://docs.google.com/spreadsheets/d/1g6g_QOdnGkjSQK-6V_sZqOfjRwdSS3VUILW1QCmygGg/edit?usp=sharing) for the 0.5 inch tokens.
 
 
-Also included are images of the final product, including the board, cards, tokens and other miscellaneous stuff.
+Also included are images of the final product, including the board, box, cards, tokens and other miscellaneous stuff.
 
 Finally the current version of the [rulebook](https://github.com/PotentialKillScreen/PokemonMaster/blob/main/Rules.pdf) is included, though it is written for the creator and not pedagogical enough to teach effiencently teach the game to a beginner.
 
