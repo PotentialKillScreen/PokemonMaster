@@ -1,0 +1,92 @@
+Linkmulti = amount
+LINK = "Obstacles.ods"
+;Link= "small_tokens.ods"
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 19.05
+[card_height] = 19.05
+CARDSIZE=[card_width], [card_height]
+[grid_thickness] = 0.5
+MARGINS = 6.5,6.5,6.5,6.5
+OVERSAMPLE=2
+dcdcdc
+;Ranges
+
+[all] = autorange({(Name)})
+
+[all] = 1-37
+
+
+[col_] = #ffffff
+;[col_1] = #ffe600
+[col_grey] = #dcdcdc
+[col_beige] = #d5be9b
+[col_surf_blue] = #278ccc
+[col_fly_blue] = #89aae3
+[col_red] = #d64b32
+
+[col_yellow] = #f7f6a5
+[col_b] = #1f88ff
+[col_y] = #e7e52c
+[col_g] = #31b32b
+[col_r] = #ff0014
+[col_orange]=#f8c86e
+[col_turquoise] = #74cea7
+
+[percent_size] = 53
+[small_image_size] = {[card_width] /1.5 + [increase_size]}
+[small_image_x] = {([card_width] - [small_image_size])*0.5}
+[small_image_y] = {([card_height] - [small_image_size])*0.5}
+;[tmp] = {10-[_image]}
+;[tmp]= {40% - 0%}
+
+;[small_image_size] = 80%
+;[small_image_size] = {80 - [tmp]}
+;[small_image_size] = {100% -[shrink_image]%}
+
+
+
+
+
+
+;
+;[small_image_size]= [tmp]
+;[small_image_x] = {50% -[small_image_size]*0.5}
+;[small_image_y] = {50% -[small_image_size]*0.5}
+;[small_image_x] = {50% -[small_image_size]}
+;[small_image_y] = {50% -[small_image_size]}
+;[small_image_x] = [small_image_size]
+;[small_image_y] = [small_image_size]
+[flip_range] = labelrange([flip],1)
+[flip_y] = 57%
+[flip_s] = 22%
+[flip_x] = 50%-[flip_s]*0.5
+
+Rectangle = [all],0,0,100%,100%, [col_[background_color]]
+
+;image = [all],[entire_image], 0,0,100%,100%,0,P
+;image = [all],[smaller_image], [small_image_x],[small_image_y],[small_image_size],[small_image_size],0,PT
+image = [all],[smaller_image], [small_image_x],[small_image_y],[small_image_size],[small_image_size],0,PT
+font = Ubuntu, 7.5,TB,#000000
+Text = [all],[Text],15%,20%,70%,60%,center,wwcenter,
+
+image = [flip_range],"Symbols/other/flip.png",[flip_x],[flip_y],[flip_s],[flip_s],0,TP
+[percent_size] = 80
+[]30*12.7/100
+;[image_size] = 80%
+;[image_x] = 50%-[image_size]*0.5
+;[image_y] = {50%-[image_size]*0.5 - [shrink_image]}
+;[image_y] = 40%+2
+
+;ELLIPSE = [ALL], 17%,17%,12.7,12.7,#FFFFFF,EMPTY
+
+display = "obstacles.png", 1,35
+display = "obstacles_back.png", 36,36
+display = "obstacles_map.png", 37,37
+;display="symbols/tokens/small/cancel.png",14,14
+
+[backs] = rangemul(36,35)
+Duplex ="1-35",[backs]
+print= Duplex
