@@ -1,0 +1,1037 @@
+LinkMulti = Amount
+LINK = "Pokemon_cards2.ods!Pokemon_cards_1"
+;LINK = "troubleshooting.ods"
+;Settings
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 70
+[card_height] = 120
+CARDSIZE=[card_width], [card_height]
+[grid_thickness] = 1.3
+MARGINS = 10,10,10,10
+OVERSAMPLE=2
+;Constants
+
+[all] = 1-{(NAME 1)}
+;[all] = 47-48
+;[all] = 1-16
+[background_range] = 1-{(pokemon_background)}
+
+[hp_spots] = 12
+[grid_width] = 14.3%
+[inside_grid_width] = [grid_width]-2*[grid_thickness]
+[spot_height] = (100%-[grid_thickness])/[hp_spots]
+[inside_spot_height] = [spot_height] - [grid_thickness]
+
+[heart_margin] = 0.6%
+[heart_width] = [inside_grid_width]-2*[heart_margin]
+
+;[grid_y_pos] = 0
+;[grid_height] = 20
+
+[frame_Margin] = 0.1
+[to_name_margin] = 0.5
+;[grid_height] = 20
+[frame_thickness] = 1.5
+[frame_height_1] = 30.2 +[frame_thickness]
+[frame_height_2] = [frame_height_1]+ [frame_height_1]
+[frame_height_3] = [frame_height_2]+ [frame_height_1]
+
+[inside_frame_height_1] = {[frame_height_1]-[frame_thickness]*2 - [smaller_y1]}
+[inside_frame_height_2] = {[frame_height_2] -[frame_thickness]*2 -[smaller_y2]}
+[inside_frame_height_3] = {[frame_height_3] -[frame_thickness]*2 - [smaller_y3]}
+
+[inside_frame_height_12] = {[frame_height_1]-[frame_thickness]*2 - [smaller_y2]}
+[inside_frame_height_13] = {[frame_height_1]-[frame_thickness]*2 - [smaller_y3]}
+
+[frame_width] = [card_width] - [grid_width]
+[inside_frame_width_1] =  {[frame_width]-[frame_thickness]*2 -[smaller_x1]}
+[inside_frame_width_2] =  {[frame_width]-[frame_thickness]*2 -[smaller_x2]}
+[inside_frame_width_3] =  {[frame_width]-[frame_thickness]*2 -[smaller_x3]}
+
+;[frame_width_3_1] = [card_width] - [grid_width]-[frame_thickness]
+;[frame_width_3_1] = [card_width] - [grid_width]-[frame_thickness]
+;[frame_width_2] =[card_width] - [grid_width]
+
+;[Name_width] = 70%
+[Name_height] = 6
+[Name_font] = [Name_height] *2.5
+
+[Attack_name_height]= 5
+[Attack_name_font] = [Attack_name_height] * 2.5
+[range_x_pos] = 58%
+
+
+[attack_font_height] = 4.6
+[attack_font] = [attack_font_height] * 2.5
+
+[Image_transparency] = 60
+[Image_1_x_offset] = 12%
+[Image_2_x_offset] = 30%
+
+[text_x_offset] = 1%
+[frame_name_offset] = 0.4%
+[name_attack_offset] = 0%
+[attack_attack_offset] = -1%
+[frame_speed_offset] = 0.5%
+[speed_ability_offset] = 0.2%
+;[Image_width_margin] = 4
+
+
+[distance_tm] = 8.5%
+[tm_offset] = 30%
+[tm_number_offset]=5%
+
+[evo_stone_size] = 15%
+[stone_type_x_margin] = 1%
+[stone_type_y_margin] = -2%
+
+[type_margin] = 1%
+[type_width] = 18.3%
+[type_height] = 10%
+
+[league_frame_thickness] = 0.4
+
+[bronze] = #b08d57
+;[bronze] = #c58d57
+;[silver] = #d3d3d3
+;[silver] = #d3d3f2
+[silver] = #d3d3ec
+;[silver] = #b7cad8
+[gold] = #fed600
+
+
+;Symbols
+HTMLIMAGE = , (electric), Symbols/Types/Vanilla/Electric.png, 3.5,3.5,PM
+HTMLIMAGE = , (fire), Symbols/Types/Vanilla/Fire.png, 3.5,3.5,PM
+HTMLIMAGE = , (flying), Symbols/Types/Vanilla/Flying.png, 3.5,3.5,PM
+HTMLIMAGE = , (grass), Symbols/Types/Vanilla/Grass.png, 3.5,3.5,PM
+HTMLIMAGE = , (normal), Symbols/Types/Vanilla/Normal.png, 3.5,3.5,PM
+HTMLIMAGE = , (psychic), Symbols/Types/Vanilla/psychic.png, 3.5,3.5,PM
+HTMLIMAGE = , (rock), Symbols/Types/Vanilla/rock.png, 3.5,3.5,PM
+HTMLIMAGE = , (water), Symbols/Types/Vanilla/water.png, 3.5,3.5,PM
+
+HTMLIMAGE = , (die_electric), Symbols/Dice/dice_electric.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_fire), Symbols/Dice/dice_fire.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_flying), Symbols/Dice/dice_flying.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_grass), Symbols/Dice/dice_grass.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_normal), Symbols/Dice/dice_normal.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_psychic), Symbols/Dice/dice_psychic.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_rock), Symbols/Dice/dice_rock.png, [name_height]-0.2,[name_height]-0.3,PM
+HTMLIMAGE = , (die_water), Symbols/Dice/dice_water.png, [name_height]-0.2,[name_height]-0.3,PM
+
+HTMLIMAGE = , (die_electric_electric), Symbols/Dice/electric_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_fire), Symbols/Dice/electric_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_flying), Symbols/Dice/electric_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_grass), Symbols/Dice/electric_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_normal), Symbols/Dice/electric_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_psychic), Symbols/Dice/electric_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_rock), Symbols/Dice/electric_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_electric_water), Symbols/Dice/electric_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_electric), Symbols/Dice/fire_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_fire), Symbols/Dice/fire_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_flying), Symbols/Dice/fire_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_grass), Symbols/Dice/fire_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_normal), Symbols/Dice/fire_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_psychic), Symbols/Dice/fire_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_rock), Symbols/Dice/fire_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_fire_water), Symbols/Dice/fire_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_electric), Symbols/Dice/flying_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_fire), Symbols/Dice/flying_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_flying), Symbols/Dice/flying_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_grass), Symbols/Dice/flying_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_normal), Symbols/Dice/flying_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_psychic), Symbols/Dice/flying_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_rock), Symbols/Dice/flying_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_flying_water), Symbols/Dice/flying_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_electric), Symbols/Dice/grass_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_fire), Symbols/Dice/grass_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_flying), Symbols/Dice/grass_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_grass), Symbols/Dice/grass_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_normal), Symbols/Dice/grass_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_psychic), Symbols/Dice/grass_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_rock), Symbols/Dice/grass_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_grass_water), Symbols/Dice/grass_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_electric), Symbols/Dice/normal_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_fire), Symbols/Dice/normal_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_flying), Symbols/Dice/normal_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_grass), Symbols/Dice/normal_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_normal), Symbols/Dice/normal_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_psychic), Symbols/Dice/normal_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_rock), Symbols/Dice/normal_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_normal_water), Symbols/Dice/normal_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_electric), Symbols/Dice/psychic_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_fire), Symbols/Dice/psychic_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_flying), Symbols/Dice/psychic_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_grass), Symbols/Dice/psychic_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_normal), Symbols/Dice/psychic_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_psychic), Symbols/Dice/psychic_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_rock), Symbols/Dice/psychic_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_psychic_water), Symbols/Dice/psychic_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_electric), Symbols/Dice/rock_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_fire), Symbols/Dice/rock_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_flying), Symbols/Dice/rock_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_grass), Symbols/Dice/rock_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_normal), Symbols/Dice/rock_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_psychic), Symbols/Dice/rock_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_rock), Symbols/Dice/rock_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_rock_water), Symbols/Dice/rock_water.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_electric), Symbols/Dice/water_electric.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_fire), Symbols/Dice/water_fire.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_flying), Symbols/Dice/water_flying.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_grass), Symbols/Dice/water_grass.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_normal), Symbols/Dice/water_normal.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_psychic), Symbols/Dice/water_psychic.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_rock), Symbols/Dice/water_rock.png, [name_height]+5,[name_height]-0.2,PM
+HTMLIMAGE = , (die_water_water), Symbols/Dice/water_water.png, [name_height]+5,[name_height]-0.2,PM
+
+HTMLIMAGE = , (die_electric_electric_electric), Symbols/Dice/electric_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+
+
+HTMLIMAGE = , (die_electric_electric_electric), Symbols/Dice/electric_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_fire), Symbols/Dice/electric_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_flying), Symbols/Dice/electric_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_grass), Symbols/Dice/electric_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_electric_electric_normal), Symbols/Dice/electric_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_psychic), Symbols/Dice/electric_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_rock), Symbols/Dice/electric_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_electric_water), Symbols/Dice/electric_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_electric), Symbols/Dice/electric_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_fire), Symbols/Dice/electric_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_flying), Symbols/Dice/electric_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_grass), Symbols/Dice/electric_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_normal), Symbols/Dice/electric_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_psychic), Symbols/Dice/electric_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_rock), Symbols/Dice/electric_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_fire_water), Symbols/Dice/electric_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_electric), Symbols/Dice/electric_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_fire), Symbols/Dice/electric_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_flying), Symbols/Dice/electric_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_grass), Symbols/Dice/electric_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_normal), Symbols/Dice/electric_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_psychic), Symbols/Dice/electric_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_rock), Symbols/Dice/electric_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_flying_water), Symbols/Dice/electric_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_electric), Symbols/Dice/electric_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_fire), Symbols/Dice/electric_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_flying), Symbols/Dice/electric_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_grass), Symbols/Dice/electric_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_normal), Symbols/Dice/electric_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_psychic), Symbols/Dice/electric_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_rock), Symbols/Dice/electric_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_grass_water), Symbols/Dice/electric_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_electric), Symbols/Dice/electric_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_fire), Symbols/Dice/electric_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_flying), Symbols/Dice/electric_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_grass), Symbols/Dice/electric_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_electric_normal_normal), Symbols/Dice/electric_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_psychic), Symbols/Dice/electric_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_rock), Symbols/Dice/electric_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_normal_water), Symbols/Dice/electric_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_electric), Symbols/Dice/electric_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_fire), Symbols/Dice/electric_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_flying), Symbols/Dice/electric_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_grass), Symbols/Dice/electric_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_normal), Symbols/Dice/electric_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_psychic), Symbols/Dice/electric_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_rock), Symbols/Dice/electric_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_psychic_water), Symbols/Dice/electric_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_electric), Symbols/Dice/electric_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_fire), Symbols/Dice/electric_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_flying), Symbols/Dice/electric_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_grass), Symbols/Dice/electric_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_normal), Symbols/Dice/electric_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_psychic), Symbols/Dice/electric_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_rock), Symbols/Dice/electric_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_rock_water), Symbols/Dice/electric_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_electric), Symbols/Dice/electric_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_fire), Symbols/Dice/electric_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_flying), Symbols/Dice/electric_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_grass), Symbols/Dice/electric_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_normal), Symbols/Dice/electric_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_psychic), Symbols/Dice/electric_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_rock), Symbols/Dice/electric_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_electric_water_water), Symbols/Dice/electric_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_electric), Symbols/Dice/fire_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_fire), Symbols/Dice/fire_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_flying), Symbols/Dice/fire_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_grass), Symbols/Dice/fire_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_normal), Symbols/Dice/fire_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_psychic), Symbols/Dice/fire_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_rock), Symbols/Dice/fire_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_electric_water), Symbols/Dice/fire_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_fire_electric), Symbols/Dice/fire_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_fire_fire), Symbols/Dice/fire_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_fire_flying), Symbols/Dice/fire_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_fire_grass), Symbols/Dice/fire_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_fire_normal), Symbols/Dice/fire_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_fire_psychic), Symbols/Dice/fire_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_fire_rock), Symbols/Dice/fire_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_fire_water), Symbols/Dice/fire_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_electric), Symbols/Dice/fire_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_fire), Symbols/Dice/fire_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_flying_flying), Symbols/Dice/fire_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_grass), Symbols/Dice/fire_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_flying_normal), Symbols/Dice/fire_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_psychic), Symbols/Dice/fire_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_rock), Symbols/Dice/fire_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_flying_water), Symbols/Dice/fire_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_electric), Symbols/Dice/fire_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_fire), Symbols/Dice/fire_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_flying), Symbols/Dice/fire_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_grass), Symbols/Dice/fire_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_normal), Symbols/Dice/fire_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_psychic), Symbols/Dice/fire_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_rock), Symbols/Dice/fire_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_grass_water), Symbols/Dice/fire_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_electric), Symbols/Dice/fire_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_fire), Symbols/Dice/fire_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_flying), Symbols/Dice/fire_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_grass), Symbols/Dice/fire_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_normal_normal), Symbols/Dice/fire_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_psychic), Symbols/Dice/fire_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_rock), Symbols/Dice/fire_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_normal_water), Symbols/Dice/fire_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_electric), Symbols/Dice/fire_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_fire), Symbols/Dice/fire_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_flying), Symbols/Dice/fire_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_grass), Symbols/Dice/fire_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_normal), Symbols/Dice/fire_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_psychic), Symbols/Dice/fire_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_rock), Symbols/Dice/fire_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_psychic_water), Symbols/Dice/fire_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_electric), Symbols/Dice/fire_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_fire), Symbols/Dice/fire_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_flying), Symbols/Dice/fire_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_grass), Symbols/Dice/fire_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_normal), Symbols/Dice/fire_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_psychic), Symbols/Dice/fire_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_rock), Symbols/Dice/fire_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_rock_water), Symbols/Dice/fire_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_electric), Symbols/Dice/fire_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_fire), Symbols/Dice/fire_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_flying), Symbols/Dice/fire_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_grass), Symbols/Dice/fire_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_normal), Symbols/Dice/fire_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_psychic), Symbols/Dice/fire_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_rock), Symbols/Dice/fire_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_fire_water_water), Symbols/Dice/fire_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_electric), Symbols/Dice/flying_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_fire), Symbols/Dice/flying_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_flying), Symbols/Dice/flying_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_grass), Symbols/Dice/flying_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_normal), Symbols/Dice/flying_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_psychic), Symbols/Dice/flying_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_rock), Symbols/Dice/flying_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_electric_water), Symbols/Dice/flying_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_electric), Symbols/Dice/flying_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_fire_fire), Symbols/Dice/flying_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_flying), Symbols/Dice/flying_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_grass), Symbols/Dice/flying_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_fire_normal), Symbols/Dice/flying_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_psychic), Symbols/Dice/flying_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_rock), Symbols/Dice/flying_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_fire_water), Symbols/Dice/flying_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_flying_electric), Symbols/Dice/flying_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_fire), Symbols/Dice/flying_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_flying), Symbols/Dice/flying_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_flying_grass), Symbols/Dice/flying_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_normal), Symbols/Dice/flying_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_flying_psychic), Symbols/Dice/flying_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_rock), Symbols/Dice/flying_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_flying_water), Symbols/Dice/flying_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_electric), Symbols/Dice/flying_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_fire), Symbols/Dice/flying_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_flying), Symbols/Dice/flying_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_grass), Symbols/Dice/flying_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_normal), Symbols/Dice/flying_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_psychic), Symbols/Dice/flying_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_rock), Symbols/Dice/flying_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_grass_water), Symbols/Dice/flying_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_electric), Symbols/Dice/flying_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_fire), Symbols/Dice/flying_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_flying), Symbols/Dice/flying_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_grass), Symbols/Dice/flying_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_normal_normal), Symbols/Dice/flying_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_psychic), Symbols/Dice/flying_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_rock), Symbols/Dice/flying_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_normal_water), Symbols/Dice/flying_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_electric), Symbols/Dice/flying_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_fire), Symbols/Dice/flying_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_flying), Symbols/Dice/flying_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_grass), Symbols/Dice/flying_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_normal), Symbols/Dice/flying_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_psychic), Symbols/Dice/flying_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_rock), Symbols/Dice/flying_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_psychic_water), Symbols/Dice/flying_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_electric), Symbols/Dice/flying_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_fire), Symbols/Dice/flying_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_flying), Symbols/Dice/flying_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_grass), Symbols/Dice/flying_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_rock_normal), Symbols/Dice/flying_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_psychic), Symbols/Dice/flying_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_rock_rock), Symbols/Dice/flying_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_rock_water), Symbols/Dice/flying_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_electric), Symbols/Dice/flying_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_fire), Symbols/Dice/flying_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_flying), Symbols/Dice/flying_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_grass), Symbols/Dice/flying_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_water_normal), Symbols/Dice/flying_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_psychic), Symbols/Dice/flying_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_flying_water_rock), Symbols/Dice/flying_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_water_water), Symbols/Dice/flying_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_electric), Symbols/Dice/grass_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_fire), Symbols/Dice/grass_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_flying), Symbols/Dice/grass_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_grass), Symbols/Dice/grass_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_normal), Symbols/Dice/grass_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_psychic), Symbols/Dice/grass_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_rock), Symbols/Dice/grass_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_electric_water), Symbols/Dice/grass_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_electric), Symbols/Dice/grass_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_fire), Symbols/Dice/grass_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_flying), Symbols/Dice/grass_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_grass), Symbols/Dice/grass_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_normal), Symbols/Dice/grass_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_psychic), Symbols/Dice/grass_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_rock), Symbols/Dice/grass_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_fire_water), Symbols/Dice/grass_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_electric), Symbols/Dice/grass_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_fire), Symbols/Dice/grass_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_flying), Symbols/Dice/grass_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_grass), Symbols/Dice/grass_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_flying_normal), Symbols/Dice/grass_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_psychic), Symbols/Dice/grass_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_rock), Symbols/Dice/grass_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_flying_water), Symbols/Dice/grass_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_grass_electric), Symbols/Dice/grass_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_grass_fire), Symbols/Dice/grass_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_grass_flying), Symbols/Dice/grass_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_grass_grass), Symbols/Dice/grass_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_grass_normal), Symbols/Dice/grass_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_grass_psychic), Symbols/Dice/grass_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_grass_rock), Symbols/Dice/grass_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_grass_water), Symbols/Dice/grass_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_electric), Symbols/Dice/grass_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_fire), Symbols/Dice/grass_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_flying), Symbols/Dice/grass_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_grass), Symbols/Dice/grass_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_normal_normal), Symbols/Dice/grass_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_psychic), Symbols/Dice/grass_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_rock), Symbols/Dice/grass_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_normal_water), Symbols/Dice/grass_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_electric), Symbols/Dice/grass_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_fire), Symbols/Dice/grass_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_psychic_flying), Symbols/Dice/grass_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_grass), Symbols/Dice/grass_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_psychic_normal), Symbols/Dice/grass_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_psychic), Symbols/Dice/grass_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_rock), Symbols/Dice/grass_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_psychic_water), Symbols/Dice/grass_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_electric), Symbols/Dice/grass_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_fire), Symbols/Dice/grass_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_flying), Symbols/Dice/grass_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_grass), Symbols/Dice/grass_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_grass_rock_normal), Symbols/Dice/grass_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_psychic), Symbols/Dice/grass_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_rock), Symbols/Dice/grass_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_rock_water), Symbols/Dice/grass_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_electric), Symbols/Dice/grass_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_fire), Symbols/Dice/grass_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_flying), Symbols/Dice/grass_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_grass), Symbols/Dice/grass_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_normal), Symbols/Dice/grass_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_psychic), Symbols/Dice/grass_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_rock), Symbols/Dice/grass_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_grass_water_water), Symbols/Dice/grass_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_electric), Symbols/Dice/normal_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_fire), Symbols/Dice/normal_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_flying), Symbols/Dice/normal_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_grass), Symbols/Dice/normal_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_normal), Symbols/Dice/normal_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_psychic), Symbols/Dice/normal_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_rock), Symbols/Dice/normal_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_electric_water), Symbols/Dice/normal_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_electric), Symbols/Dice/normal_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_fire), Symbols/Dice/normal_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_flying), Symbols/Dice/normal_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_grass), Symbols/Dice/normal_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_normal), Symbols/Dice/normal_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_psychic), Symbols/Dice/normal_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_rock), Symbols/Dice/normal_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_fire_water), Symbols/Dice/normal_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_electric), Symbols/Dice/normal_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_fire), Symbols/Dice/normal_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_flying), Symbols/Dice/normal_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_grass), Symbols/Dice/normal_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_normal), Symbols/Dice/normal_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_psychic), Symbols/Dice/normal_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_rock), Symbols/Dice/normal_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_flying_water), Symbols/Dice/normal_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_electric), Symbols/Dice/normal_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_fire), Symbols/Dice/normal_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_flying), Symbols/Dice/normal_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_grass), Symbols/Dice/normal_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_normal), Symbols/Dice/normal_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_psychic), Symbols/Dice/normal_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_rock), Symbols/Dice/normal_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_grass_water), Symbols/Dice/normal_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_electric), Symbols/Dice/normal_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_fire), Symbols/Dice/normal_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_normal_normal_flying), Symbols/Dice/normal_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_grass), Symbols/Dice/normal_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_normal_normal_normal), Symbols/Dice/normal_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_psychic), Symbols/Dice/normal_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_rock), Symbols/Dice/normal_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_normal_water), Symbols/Dice/normal_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_electric), Symbols/Dice/normal_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_fire), Symbols/Dice/normal_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_flying), Symbols/Dice/normal_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_grass), Symbols/Dice/normal_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_normal), Symbols/Dice/normal_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_psychic), Symbols/Dice/normal_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_rock), Symbols/Dice/normal_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_psychic_water), Symbols/Dice/normal_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_electric), Symbols/Dice/normal_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_fire), Symbols/Dice/normal_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_flying), Symbols/Dice/normal_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_grass), Symbols/Dice/normal_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_normal), Symbols/Dice/normal_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_psychic), Symbols/Dice/normal_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_rock), Symbols/Dice/normal_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_rock_water), Symbols/Dice/normal_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_electric), Symbols/Dice/normal_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_fire), Symbols/Dice/normal_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_flying), Symbols/Dice/normal_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_grass), Symbols/Dice/normal_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_normal), Symbols/Dice/normal_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_psychic), Symbols/Dice/normal_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_rock), Symbols/Dice/normal_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_normal_water_water), Symbols/Dice/normal_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_electric), Symbols/Dice/psychic_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_fire), Symbols/Dice/psychic_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_flying), Symbols/Dice/psychic_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_grass), Symbols/Dice/psychic_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_normal), Symbols/Dice/psychic_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_psychic), Symbols/Dice/psychic_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_rock), Symbols/Dice/psychic_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_electric_water), Symbols/Dice/psychic_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_electric), Symbols/Dice/psychic_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_fire), Symbols/Dice/psychic_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_flying), Symbols/Dice/psychic_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_grass), Symbols/Dice/psychic_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_normal), Symbols/Dice/psychic_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_psychic), Symbols/Dice/psychic_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_rock), Symbols/Dice/psychic_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_fire_water), Symbols/Dice/psychic_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_electric), Symbols/Dice/psychic_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_fire), Symbols/Dice/psychic_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_flying), Symbols/Dice/psychic_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_grass), Symbols/Dice/psychic_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_normal), Symbols/Dice/psychic_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_psychic), Symbols/Dice/psychic_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_rock), Symbols/Dice/psychic_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_flying_water), Symbols/Dice/psychic_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_electric), Symbols/Dice/psychic_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_fire), Symbols/Dice/psychic_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_flying), Symbols/Dice/psychic_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_grass), Symbols/Dice/psychic_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_normal), Symbols/Dice/psychic_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_psychic), Symbols/Dice/psychic_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_rock), Symbols/Dice/psychic_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_grass_water), Symbols/Dice/psychic_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_normal_electric), Symbols/Dice/psychic_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_normal_fire), Symbols/Dice/psychic_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_normal_flying), Symbols/Dice/psychic_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_normal_grass), Symbols/Dice/psychic_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_normal_normal), Symbols/Dice/psychic_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_normal_psychic), Symbols/Dice/psychic_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_normal_rock), Symbols/Dice/psychic_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_normal_water), Symbols/Dice/psychic_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_psychic_electric), Symbols/Dice/psychic_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_psychic_fire), Symbols/Dice/psychic_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_psychic_psychic_flying), Symbols/Dice/psychic_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_grass), Symbols/Dice/psychic_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_normal), Symbols/Dice/psychic_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_psychic), Symbols/Dice/psychic_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_psychic_rock), Symbols/Dice/psychic_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_water), Symbols/Dice/psychic_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_electric), Symbols/Dice/psychic_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_fire), Symbols/Dice/psychic_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_flying), Symbols/Dice/psychic_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_grass), Symbols/Dice/psychic_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_normal), Symbols/Dice/psychic_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_psychic), Symbols/Dice/psychic_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_rock), Symbols/Dice/psychic_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_rock_water), Symbols/Dice/psychic_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_electric), Symbols/Dice/psychic_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_fire), Symbols/Dice/psychic_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_flying), Symbols/Dice/psychic_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_grass), Symbols/Dice/psychic_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_water_normal), Symbols/Dice/psychic_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_psychic), Symbols/Dice/psychic_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_psychic_water_rock), Symbols/Dice/psychic_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_water_water), Symbols/Dice/psychic_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_electric), Symbols/Dice/rock_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_fire), Symbols/Dice/rock_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_flying), Symbols/Dice/rock_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_grass), Symbols/Dice/rock_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_normal), Symbols/Dice/rock_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_psychic), Symbols/Dice/rock_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_rock), Symbols/Dice/rock_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_electric_water), Symbols/Dice/rock_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_electric), Symbols/Dice/rock_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_fire), Symbols/Dice/rock_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_flying), Symbols/Dice/rock_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_grass), Symbols/Dice/rock_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_normal), Symbols/Dice/rock_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_psychic), Symbols/Dice/rock_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_rock), Symbols/Dice/rock_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_fire_water), Symbols/Dice/rock_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_flying_electric), Symbols/Dice/rock_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_flying_fire), Symbols/Dice/rock_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_flying_flying), Symbols/Dice/rock_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_flying_grass), Symbols/Dice/rock_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_flying_normal), Symbols/Dice/rock_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_flying_psychic), Symbols/Dice/rock_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_flying_rock), Symbols/Dice/rock_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_flying_water), Symbols/Dice/rock_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_electric), Symbols/Dice/rock_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_fire), Symbols/Dice/rock_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_flying), Symbols/Dice/rock_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_grass), Symbols/Dice/rock_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_normal), Symbols/Dice/rock_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_psychic), Symbols/Dice/rock_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_rock), Symbols/Dice/rock_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_grass_water), Symbols/Dice/rock_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_electric), Symbols/Dice/rock_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_fire), Symbols/Dice/rock_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_flying), Symbols/Dice/rock_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_grass), Symbols/Dice/rock_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_normal_normal), Symbols/Dice/rock_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_psychic), Symbols/Dice/rock_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_rock), Symbols/Dice/rock_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_normal_water), Symbols/Dice/rock_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_electric), Symbols/Dice/rock_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_fire), Symbols/Dice/rock_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_flying), Symbols/Dice/rock_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_grass), Symbols/Dice/rock_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_normal), Symbols/Dice/rock_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_psychic), Symbols/Dice/rock_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_rock), Symbols/Dice/rock_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_psychic_water), Symbols/Dice/rock_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_rock_electric), Symbols/Dice/rock_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_rock_fire), Symbols/Dice/rock_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_rock_flying), Symbols/Dice/rock_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_rock_grass), Symbols/Dice/rock_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_rock_normal), Symbols/Dice/rock_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_rock_psychic), Symbols/Dice/rock_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_rock_rock), Symbols/Dice/rock_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_rock_water), Symbols/Dice/rock_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_water_electric), Symbols/Dice/rock_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_rock_water_fire), Symbols/Dice/rock_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_water_flying), Symbols/Dice/rock_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_water_grass), Symbols/Dice/rock_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_rock_water_normal), Symbols/Dice/rock_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+H;TMLIMAGE = , (die_rock_water_psychic), Symbols/Dice/rock_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HT;MLIMAGE = , (die_rock_water_rock), Symbols/Dice/rock_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_rock_water_water), Symbols/Dice/rock_water_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_electric), Symbols/Dice/water_electric_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_fire), Symbols/Dice/water_electric_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_flying), Symbols/Dice/water_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_grass), Symbols/Dice/water_electric_grass.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_normal), Symbols/Dice/water_electric_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_psychic), Symbols/Dice/water_electric_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_rock), Symbols/Dice/water_electric_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_electric_water), Symbols/Dice/water_electric_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_electric), Symbols/Dice/water_fire_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_fire), Symbols/Dice/water_fire_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_fire_flying), Symbols/Dice/water_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_grass), Symbols/Dice/water_fire_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_fire_normal), Symbols/Dice/water_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_psychic), Symbols/Dice/water_fire_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_rock), Symbols/Dice/water_fire_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_fire_water), Symbols/Dice/water_fire_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_flying_electric), Symbols/Dice/water_flying_electric.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_flying_fire), Symbols/Dice/water_flying_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_flying_flying), Symbols/Dice/water_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_flying_grass), Symbols/Dice/water_flying_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_flying_normal), Symbols/Dice/water_flying_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_flying_psychic), Symbols/Dice/water_flying_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_flying_rock), Symbols/Dice/water_flying_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_flying_water), Symbols/Dice/water_flying_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_electric), Symbols/Dice/water_grass_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_fire), Symbols/Dice/water_grass_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_flying), Symbols/Dice/water_grass_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_grass), Symbols/Dice/water_grass_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_grass_normal), Symbols/Dice/water_grass_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_psychic), Symbols/Dice/water_grass_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_rock), Symbols/Dice/water_grass_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_grass_water), Symbols/Dice/water_grass_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_electric), Symbols/Dice/water_normal_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_fire), Symbols/Dice/water_normal_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_flying), Symbols/Dice/water_normal_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_grass), Symbols/Dice/water_normal_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_normal_normal), Symbols/Dice/water_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_psychic), Symbols/Dice/water_normal_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_rock), Symbols/Dice/water_normal_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_normal_water), Symbols/Dice/water_normal_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_electric), Symbols/Dice/water_psychic_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_fire), Symbols/Dice/water_psychic_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_flying), Symbols/Dice/water_psychic_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_grass), Symbols/Dice/water_psychic_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_psychic_normal), Symbols/Dice/water_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_psychic_psychic), Symbols/Dice/water_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_rock), Symbols/Dice/water_psychic_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_psychic_water), Symbols/Dice/water_psychic_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_electric), Symbols/Dice/water_rock_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_fire), Symbols/Dice/water_rock_fire.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_flying), Symbols/Dice/water_rock_flying.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_grass), Symbols/Dice/water_rock_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_rock_normal), Symbols/Dice/water_rock_normal.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_psychic), Symbols/Dice/water_rock_psychic.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_rock), Symbols/Dice/water_rock_rock.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_rock_water), Symbols/Dice/water_rock_water.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_water_electric), Symbols/Dice/water_water_electric.png, [name_height] +5, [name_height] -0.2,PM
+;HTMLIMAGE = , (die_water_water_fire), Symbols/Dice/water_water_fire.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_flying), Symbols/Dice/water_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_grass), Symbols/Dice/water_water_grass.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_normal), Symbols/Dice/water_water_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_psychic), Symbols/Dice/water_water_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_rock), Symbols/Dice/water_water_rock.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_water), Symbols/Dice/water_water_water.png, [name_height] +5, [name_height] -0.2,PM
+
+HTMLIMAGE = , (die_psychic_psychic_normal_normal), Symbols/Dice/psychic_psychic_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_psychic_psychic), Symbols/Dice/psychic_psychic_psychic_psychic.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_psychic_psychic_psychic_normal), Symbols/Dice/psychic_psychic_psychic_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_flying_flying), Symbols/Dice/water_water_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_water_water_water_flying), Symbols/Dice/water_water_water_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_fire_fire_flying), Symbols/Dice/fire_fire_fire_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_fire_fire_flying_flying), Symbols/Dice/fire_fire_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_electric_electric_flying_flying), Symbols/Dice/electric_electric_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_electric_electric_electric_flying), Symbols/Dice/electric_electric_electric_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_flying_flying), Symbols/Dice/flying_flying_flying_flying.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_fire_normal), Symbols/Dice/flying_flying_fire_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_fire_normal_normal), Symbols/Dice/flying_fire_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_flying_normal_normal), Symbols/Dice/flying_flying_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+HTMLIMAGE = , (die_flying_fire_normal_normal), Symbols/Dice/flying_fire_normal_normal.png, [name_height] +5, [name_height] -0.2,PM
+
+HTMLIMAGE = , (die_mew), Symbols/Dice/mew.png, [name_height] +5, [name_height] -0.2,PM
+
+HTMLIMAGE = , (2_line), Symbols/Ranges/line2.png, 10.5,[attack_font_height],PM
+HTMLIMAGE = , (3_line), Symbols/Ranges/line3.png, 14,[attack_font_height],PM
+HTMLIMAGE = , (4_line), Symbols/Ranges/line4.png, 17.5,[attack_font_height],PM
+HTMLIMAGE = , (5_line), Symbols/Ranges/line5.png, 21,[attack_font_height],PM
+HTMLIMAGE = , (6_line), Symbols/Ranges/line6.png, 24.5,[attack_font_height],PM
+HTMLIMAGE = , (7_line), Symbols/Ranges/line7.png, 28,[attack_font_height],PM
+
+HTMLIMAGE = , (3_hex), Symbols/Ranges/s.png,[attack_font_height],[attack_font_height],PMD
+HTMLIMAGE = , (circle), Symbols/Ranges/l.png, [attack_font_height],[attack_font_height],PMD
+HTMLIMAGE = , (half), Symbols/Ranges/half_circle.png, [attack_font_height]*1.2,[attack_font_height],PMD
+HTMLIMAGE = , (around), Symbols/Ranges/around.png, [attack_font_height],[attack_font_height],PMD
+HTMLIMAGE = , (around_2), Symbols/Ranges/around2.png, [attack_font_height],[attack_font_height],PMD
+
+HTMLIMAGE = , (Female), Symbols/Other/Female.png, [name_height],[name_height],PB
+HTMLIMAGE = , (Male), Symbols/Other/Male.png, [name_height],[name_height],PB
+HTMLIMAGE = , (cc), Symbols/Other/timeglass.png, [Attack_name_height],[Attack_name_height],PM
+HTMLIMAGE = , (health), Symbols/Other/heart.png,[attack_font_height],[attack_font_height],PM
+HTMLIMAGE = , (token), Symbols/Other/token.png, [attack_font_height],[attack_font_height],PM
+HTMLIMAGE = , (slash), Symbols/Other/slash.png, [attack_font_height],[attack_font_height],PM
+HTMLIMAGE = , (-), Symbols/Other/minus.png, 2,3.5,PM
+HTMLIMAGE = , (damage), Symbols/Other/damage.png, [attack_font_height]*1.5,[attack_font_height],PM
+HTMLIMAGE = , (grass_x), Symbols/Other/grass_x.png,[attack_font_height]*1,[attack_font_height],PM
+HTMLIMAGE = , (rock_x), Symbols/Other/rock_x.png,[attack_font_height]*1,[attack_font_height],PM
+HTMLIMAGE = , (+1), Symbols/other/+1.png,[attack_font_height]-1,[attack_font_height]-1,PM
+
+
+
+;Grid evolutions
+
+;RECTANGLE = [all], 100%-[grid_width] + [grid_thickness], [grid_thickness],[grid_width] - [grid_thickness], {[level_1]*[card_height]/[hp_spots]},[color_1], EMPTY,[grid_thickness]
+IF = ([evolutions] = 3)
+;evo color
+    RECTANGLE = [all], 100%-[grid_width]+[grid_thickness] ,0,[inside_grid_width],100%,[bronze]
+    RECTANGLE = [all], 100%-[grid_width]+[grid_thickness] ,{[EV1_start]* [spot_height]},[inside_grid_width],100%,[silver]
+
+;Frame 1
+;Frame
+    RECTANGLE = [all], 0, 0,[frame_thickness],[frame_height_1],[bronze]
+    RECTANGLE = [all], 0, 0,[frame_width],[frame_thickness] ,[bronze]
+    RECTANGLE = [all], [frame_width]-[frame_thickness], 0,[frame_thickness],[frame_height_1],[bronze]
+    RECTANGLE = [all], 0, [frame_height_1]-[frame_thickness],[frame_width],[frame_thickness],[bronze]
+    ;pokemon image
+    IMAGE = [all],[img 1], {[frame_thickness] +[Image_1_x_offset] + [offset_x1]} ,{[frame_thickness]+[offset_y1]},{[inside_frame_width_1]-[image_1_x_offset]},[inside_frame_height_1],0,{"TP [Reverse_1]"},[Image_transparency]
+
+    ;IMAGE = [all],[img 1], {[tmp]*10},[frame_thickness],[inside_frame_width]-[image_1_x_offset],[inside_frame_height_1],0,TP,[Image_transparency]
+
+
+
+;Frame 2
+    RECTANGLE = [all], 0, [frame_height_1],[frame_thickness],[frame_height_1],[silver]
+    RECTANGLE = [all], 0, [frame_height_1],[frame_width],[frame_thickness] ,[silver]
+    RECTANGLE = [all], [frame_width]-[frame_thickness], [frame_height_1],[frame_thickness],[frame_height_1],[silver]
+    RECTANGLE = [all], 0, [frame_height_2]-[frame_thickness] ,[frame_width],[frame_thickness],[silver]
+;pokemon image
+    IMAGE = [all],[img 2],{[frame_thickness] +[image_2_x_offset]+[offset_x2]},{[frame_height_1]+[frame_thickness]+ [offset_y2]},{[inside_frame_width_2]-[image_2_x_offset]},[inside_frame_height_12],0,{"TP [Reverse_2]"},[Image_transparency]
+;name
+    FONT=Ubuntu,[Name_font],TIB,#000000
+    HTMLTEXT= [all],<p> [Name_2_out]</p>,[frame_thickness]+[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset],100%,[Name_height],#FFFFFF,0,T
+
+
+
+;Frame 3
+    RECTANGLE = [all], 0, [frame_height_2],[frame_thickness],[frame_height_1],[gold]
+    RECTANGLE = [all], 0, [frame_height_2],[frame_width],[frame_thickness] ,[gold]
+    RECTANGLE = [all], [frame_width]-[frame_thickness], [frame_height_2],[frame_thickness],[frame_height_1],[gold]
+    RECTANGLE = [all], 0, [frame_height_3]-[frame_thickness] ,[frame_width],[frame_thickness],[gold]
+;pokemon image
+    IMAGE = [all],[img 3],{[frame_thickness]+[image_2_x_offset]+[offset_x3]},{[frame_height_2] +[frame_thickness]+[offset_y3]},{[inside_frame_width_3]-[image_2_x_offset]},[inside_frame_height_13],0,{"TP [Reverse_3]"},[Image_transparency]
+;name
+    FONT=Ubuntu,[Name_font],TIB,#000000
+    HTMLTEXT= [all], <p>[NAME_3_out]</p>,[frame_thickness]+[text_x_offset],[frame_height_2]+[frame_name_offset]+[frame_thickness],100%,[Name_height],#FFFFFF,0,T
+
+
+;evo gold and stone
+    IF = ([Evo_image] ="" )
+        RECTANGLE = [all], 100%-[grid_width],{[EV2_start]* [spot_height]},[grid_width],100%,[gold]
+    ELSE
+        IMAGE = [all],[Evo_image], [frame_width]-[frame_thickness]-[evo_stone_size]-[stone_type_x_margin],  [frame_height_2]+[frame_thickness]+[stone_type_y_margin], [evo_stone_size],[evo_stone_size],0,PT
+    ENDIF
+ElseIF = ([evolutions] = 2)
+;evo color
+    RECTANGLE = [all], 100%-[grid_width] ,0,[grid_width],100%,[silver]
+    ;Frame 1
+;Frame
+    RECTANGLE = [all], 0, 0,[frame_thickness],[frame_height_1],[silver]
+    RECTANGLE = [all], 0, 0,[frame_width],[frame_thickness] ,[silver]
+    RECTANGLE = [all], [frame_width]-[frame_thickness], 0,[frame_thickness],[frame_height_1],[silver]
+    RECTANGLE = [all], 0, [frame_height_1]-[frame_thickness],[frame_width],[frame_thickness],[silver]
+
+;pokemon image
+    IMAGE = [all],[img 1], {[frame_thickness]+[offset_x1]},{[frame_thickness]+[offset_y1]},[inside_frame_width_1],[inside_frame_height_1],0,{"TPE [Reverse_1]"},[Image_transparency]
+
+;Frame 2
+    RECTANGLE = [all], 0, [frame_height_1],[frame_thickness],[frame_height_2],[gold]
+    RECTANGLE = [all], 0, [frame_height_1],[frame_width],[frame_thickness] ,[gold]
+    RECTANGLE = [all], [frame_width]-[frame_thickness], [frame_height_1],[frame_thickness],[frame_height_2],[gold]
+    RECTANGLE = [all], 0, [frame_height_3]-[frame_thickness] ,[frame_width],[frame_thickness],[gold]
+;pokemon image
+    IMAGE = [all],[img 2], {[frame_thickness]+[offset_x2]},{[frame_height_1]+[frame_thickness]+[offset_y2]},[inside_frame_width_2],[inside_frame_height_2],0,{"TPE [Reverse_2]"},[Image_transparency]
+;name
+    FONT=Ubuntu,[Name_font],TIB,#000000
+    HTMLTEXT= [all],<p> [Name_2_out]</p>,[frame_thickness]+[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset],100%,[Name_height],#FFFFFF,0,T
+    IF = ([Evo_image] ="" )
+        RECTANGLE = [all], 100%-[grid_width] ,{[EV1_start]* [spot_height]},[grid_width], 100%,[gold]
+    ELSE
+        IMAGE = [all],[Evo_image], [frame_width]-[frame_thickness]-[evo_stone_size]-[stone_type_x_margin],  [frame_height_1] + [frame_thickness] +[stone_type_y_margin], [evo_stone_size],[evo_stone_size],0,PT
+    ENDIF
+ElseIF = ([evolutions] = 1)
+    ;RECTANGLE = [all], 100%-[grid_width]+[grid_thickness] ,0+[grid_thickness],[grid_width]-[grid_thickness]*2,{[level_1]* [card_height]/[hp_spots]-[grid_thickness]},[gold]
+    RECTANGLE = [all], 100%-[grid_width],0,[grid_width],100%,[gold]
+
+    ;Frame 2
+    RECTANGLE = [all], 0, 0,[frame_thickness],[frame_height_3],[gold]
+    RECTANGLE = [all], 0, 0,[frame_width],[frame_thickness] ,[gold]
+    RECTANGLE = [all], [frame_width]-[frame_thickness],0,[frame_thickness],[frame_height_3],[gold]
+    RECTANGLE = [all], 0, [frame_height_3]-[frame_thickness] ,[frame_width],[frame_thickness],[gold]
+;pokemon image
+    IMAGE = [all],[img 1], {[frame_thickness] +[offset_x1]},{[frame_thickness]+[offset_y1]},[inside_frame_width_1],[inside_frame_height_3],0,{"TP [Reverse_1]"},[Image_transparency]
+;name
+    FONT=Ubuntu,[Name_font],TB,#000000
+    HTMLTEXT= [all],<p> [Name_2_out]</p>,[frame_thickness] +[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset],100%,[Name_height],#FFFFFF,0,T
+ENDIF
+
+;Grid
+;Vertical lines
+RECTANGLE = [all], 100%-[grid_width], 0,[grid_thickness],100%,#000000
+RECTANGLE = [all], 100%-[grid_thickness], 0, [grid_thickness],100%,#000000
+
+;Horizontal lines
+RECTANGLE= [all], 100% - [grid_width],0,[grid_width],[grid_thickness],#000000
+RECTANGLE= [all], 100% - [grid_width],100%-[grid_thickness],[grid_width],[grid_thickness],#000000
+
+
+
+IF = ([pos_1_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], [grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_1_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 1*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_2_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (2-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_2_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 2*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_3_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (3-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_3_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 3*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_4_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (4-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_4_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 4*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_5_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (5-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_5_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 5*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_6_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (6-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_6_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 6*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_7_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (7-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_7_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 7*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_8_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (8-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_8_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 8*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_9_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (9-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_9_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 9*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_10_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (10-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_10_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width],10 *[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_11_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (11-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+
+ENDIF
+IF = ([pos_11_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 11*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+IF = ([pos_12_heart]=1)
+    IMAGE = [all],Symbols/Other/heart.png, 100%-[grid_width]+[grid_thickness]+[heart_margin], (12-1)*[spot_height]+[grid_thickness], [heart_width],[inside_spot_height],0,PT
+ENDIF
+IF = ([pos_12_horizontal]=1)
+    RECTANGLE = [all], 100%-[grid_width], 12*[spot_height],[grid_width],[grid_thickness],#000000
+ENDIF
+
+
+
+;No mather the amount of evolutions
+
+;Type
+    IMAGE=[all],[IMAGE TYPE],100%-[grid_width]-[frame_thickness]-[type_width]-[type_margin],[frame_thickness],[type_width],[type_height],0 ,PT
+
+;name
+FONT=Ubuntu,[Name_font],TIB,#000000
+HTMLTEXT= [all], <p> [NAME_1_out] </p>,[frame_thickness]+[text_x_offset],[frame_thickness] +[frame_name_offset],100%,[Name_height],#FFFFFF,0,T
+
+
+;Tm name
+    FONT=Ubuntu,[attack_Name_font],TB,#000000
+    HTMLTEXT= [all],<p> [tm_1_name]</p>,[frame_thickness]+[text_x_offset],[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+;Tm text
+    FONT=Ubuntu,[attack_font],T,#000000
+    HTMLTEXT= [all], <p> [tm_1_damage_out] </p>,[frame_thickness]+[text_x_offset],[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p> Range: [attack_range_1] </p>,[range_x_pos],[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p><br> <f>[tm_1_text]</f></p>,[frame_thickness]+[text_x_offset],[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],[Card_width]-[grid_width] - [grid_thickness]-[text_x_offset],100%,,0,T
+
+
+
+;Tm name
+    FONT=Ubuntu,[attack_Name_font],TB,#000000
+    ;HTMLTEXT= [all],<p> "<attack_name_font> [tm_1_name] </attack_name_font" </p>,5,0,100,10,#FFFFFF,0,T
+
+    HTMLTEXT= [all],<p> [tm_2_name]</p>,[frame_thickness]+[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+;Tm text
+    FONT=Ubuntu,[attack_font],T,#000000
+    HTMLTEXT= [all], <p> [tm_2_damage_out] </p>,[frame_thickness]+[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p> Range: [attack_range_2] </p>,[range_x_pos],[frame_height_1]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p><br><f>[tm_2_text]</f></p>,[frame_thickness]+[text_x_offset],[frame_height_1]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],[Card_width]-[grid_width] - [grid_thickness]-[text_x_offset],100%,,0,T
+
+;Tm name
+    FONT=Ubuntu,[attack_Name_font],TB,#000000
+    HTMLTEXT= [all],<p> [tm_3_name]</p>,[frame_thickness]+[text_x_offset],[frame_height_2]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+;Tm text
+    FONT=Ubuntu,[attack_font],T,#000000
+    HTMLTEXT= [all], <p> [tm_3_damage_out] </p>,[frame_thickness]+[text_x_offset],[frame_height_2]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p> Range: [attack_range_3] </p>,[range_x_pos],[frame_height_2]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],100%,[attack_Name_height],#FFFFFF,0,T
+    HTMLTEXT= [all], <p><br><f>[tm_3_text]</f></p>,[frame_thickness]+[text_x_offset],[frame_height_2]+[frame_thickness]+[frame_name_offset]+[name_height]+[name_attack_offset]+[name_height]+[attack_attack_offset],[Card_width]-[grid_width] - [grid_thickness]-[text_x_offset],100%,,0,T
+
+
+
+
+
+RECTANGLE = [all], 0,[frame_height_3],[league_frame_thickness],100%,#000000
+RECTANGLE = [all], 0,100%-[league_frame_thickness],100%,[league_frame_thickness],#000000
+;Pokémon league info
+FONT=Ubuntu,[attack_font],TB,#000000
+TEXT = [all], [speed_texts],[frame_thickness]+[text_x_offset],[frame_height_3]+[frame_speed_offset], 100%,[attack_font_height],Left
+
+[tm_color_transparency] = 75
+IMAGE=[all],[tm_1_image],[tm_offset] + [distance_tm]*1+ [tm_number_offset],[frame_height_3]+[frame_speed_offset],[attack_font_height],[attack_font_height] ,0,PN,[tm_color_transparency]
+IMAGE=[all],[tm_2_image],[tm_offset] + [distance_tm]*2+ [tm_number_offset],[frame_height_3]+[frame_speed_offset],[attack_font_height],[attack_font_height] ,0,PN,[tm_color_transparency]
+IMAGE=[all],[tm_3_image],[tm_offset] + [distance_tm]*3+ [tm_number_offset],[frame_height_3]+[frame_speed_offset],[attack_font_height],[attack_font_height] ,0,PN,[tm_color_transparency]
+IMAGE=[all],[tm_4_image],[tm_offset] + [distance_tm]*4+ [tm_number_offset],[frame_height_3]+[frame_speed_offset],[attack_font_height],[attack_font_height] ,0,PN,[tm_color_transparency]
+IMAGE=[all],[tm_5_image],[tm_offset] + [distance_tm]*5+ [tm_number_offset],[frame_height_3]+[frame_speed_offset],[attack_font_height],[attack_font_height] ,0,PN,[tm_color_transparency]
+;HTMLTEXT = [all], <p>TM: </p>,21,[frame_height_3] + 3*[frame_thickness], 8,[attack_font_height]
+TEXT = [all], "TMs: " ,[tm_offset],[frame_height_3] + [frame_speed_offset], 100%,[attack_font_height],LEFT
+    TEXT = [all], [sorted_1_tm_index],[tm_offset] + [distance_tm]*1 + [tm_number_offset],[frame_height_3] + [frame_speed_offset], [attack_font_height],[attack_font_height],Center
+    TEXT = [all], [sorted_2_tm_index],[tm_offset] + [distance_tm]*2+ [tm_number_offset],[frame_height_3] + [frame_speed_offset], [attack_font_height],[attack_font_height],Center
+    TEXT = [all], [sorted_3_tm_index],[tm_offset] + [distance_tm]*3 + [tm_number_offset],[frame_height_3] + [frame_speed_offset], [attack_font_height],[attack_font_height],Center
+    TEXT = [all], [sorted_4_tm_index],[tm_offset] + [distance_tm]*4 + [tm_number_offset],[frame_height_3] + [frame_speed_offset], [attack_font_height],[attack_font_height],Center
+    TEXT = [all], [sorted_5_tm_index],[tm_offset] + [distance_tm]*5 + [tm_number_offset],[frame_height_3] + [frame_speed_offset], [attack_font_height],[attack_font_height],Center
+;TEXT = [all], [tm_text],17,[frame_height_3] + 3*[frame_thickness], 30,[attack_font_height]
+FONT=Ubuntu,[attack_font],T,#000000
+HTMLTEXT = [all],<p> <b> [ability_name]:</b> [ability]</p>,[frame_thickness]+[text_x_offset],[frame_height_3]+[frame_speed_offset]+[attack_font_height]+[speed_ability_offset], 100%-[grid_width]-[frame_thickness]-[text_x_offset],100%,,0,T
+
+zoom = 100
+
+IF = ([pokemon_background] = 1)
+    IMAGE=[background_range],[pokemon_background_img],0,0,100%,100%
+ENDIF
+
+;Display = "tts_pokemon_cards_1.png",1,8
+;Display = "tts_pokemon_cards_2.png",9,16
+;Display = "tts_pokemon_cards_3.png",17,24
+;Display = "tts_pokemon_cards_4.png",25,32
+;Display = "tts_pokemon_cards_5.png",33,40
+;Display = "tts_pokemon_cards_6.png",41,48
+;Display = "tts_pokemon_cards_7.png",49,56
+;Display = "tts_pokemon_cards_8.png",57,64
+;Display = "tts_pokemon_cards_9.png",65,72
+;Display = "tts_pokemon_cards_10.png",73,80
+
+
+;Display = "tts_pokemon_cards_10.png",73,80
+
+
+;Display = "tts_pokemon_cards_2.png",21,40
+
+;Display = "tts_pokemon_cards_3.1.png",1,70
+
+;Display = "tts_pokemon_cards_3.2.png",71,79
