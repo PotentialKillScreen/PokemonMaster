@@ -1,0 +1,621 @@
+LINKMULTI = amount
+LINK = "med_tokens.ods!Sheet1"
+
+UNIT = MM
+PAGE = 210,297, PORTRAIT
+;BORDER = RECTANGLE, #000000, [grid_thickness]
+DPI=300
+[card_width] = 25.4
+[card_height] = 25.4
+[card_width] = 23
+[card_height] = 23
+CARDSIZE=[card_width], [card_height]
+[grid_thickness] = 0
+MARGINS = 6.5,6.5,6.5,15
+OVERSAMPLE=2
+
+;Ranges
+[all] = autorange({(Name)})
+[extra_range] = 1-{(Name)}
+[offset] = 0
+
+
+;pokemon_tokens
+
+[name_x_margin] = 0%
+[name_y_margin] = 12%
+
+[Name_height] = 5.1
+[Name_font] = [Name_height] *1.5
+
+[image_x_margin] = 5.3%
+[image_y_margin] = 30%
+[image_x_size] = 43%
+[image_y_size] = 43%
+
+[ball_die_radius] = 15%
+[die_size] = 0.8*[ball_die_radius]
+
+[ball_x_margin] = 73%
+[ball_y_margin] = 53%
+
+[ball_trans] = 100
+[die_trans] = 60
+
+[size_6] = ([ball_die_radius]*2+[die_size])
+[size_5] = (0.85*[size_6])
+[size_4] = (0.8*[size_6])
+[size_3] = (0.6*[size_6])
+[size_2] = (1.5*[die_size])
+[size_1] = 1.2*[die_size]
+
+;[offset_1] = 0%
+[offset_2] = 0%
+[offset_2x] = -10%
+[offset_2y] = 4%
+[offset_3] = 2%
+[offset_4] = 4%
+[offset_5] = 5%
+;[offset_6] = 0%
+
+[ball_1_x] = [ball_x_margin] - 0.866*[ball_die_radius]-0.5*[die_size]
+[ball_2_x] = [ball_x_margin] -0.5*[die_size]
+[ball_3_x] = [ball_x_margin] + 0.866*[ball_die_radius]-0.5*[die_size]
+[ball_1_y] = [ball_y_margin] + 0.5 * [ball_die_radius]-0.5*[die_size]
+[ball_2_y] = [ball_y_margin] - 0.5 * [ball_die_radius]-0.5*[die_size]
+[ball_3_y] = [ball_y_margin] - 1* [ball_die_radius]-0.5*[die_size]
+[ball_4_y] = [ball_y_margin] + 1* [ball_die_radius]-0.5*[die_size]
+
+[pos_x_01] = [ball_x_margin] - 0.866*[ball_die_radius] -0.5*[size_1]
+[pos_y_01] = [ball_y_margin] + 0.5*[ball_die_radius] -0.5*[size_1]
+
+[pos_x_02] = [ball_x_margin] -0.866*([ball_die_radius]-[offset_2]) -0.5*[size_2]
+[pos_y_02] = [ball_y_margin] -0.5*[size_2]
+
+[pos_x_03] = [ball_x_margin] - 0.866*([ball_die_radius]-[offset_3]) -0.5*[size_3]
+[pos_y_03] = [ball_y_margin] - 0.5*([ball_die_radius]-[offset_3]) -0.5*[size_3]
+
+[pos_x_04] = [ball_x_margin] - 0.5*([ball_die_radius]-[offset_4]) -0.5*[size_4]
+[pos_y_04] = [ball_y_margin] - 0.866*([ball_die_radius]-[offset_4]) -0.5*[size_4]
+
+[pos_x_05] = [ball_x_margin]-0.5*[size_5]
+[pos_y_05] = [ball_y_margin]-1*([ball_die_radius]-[offset_5])-0.5*[size_5]
+
+[pos_x_06] = [ball_x_margin]-0.5*[size_6]
+[pos_y_06] = [ball_y_margin]-0.5*[size_6]
+
+[pos_x_11] = [ball_x_margin] - 0.866*[ball_die_radius] -0.5*[size_1]
+[pos_y_11] = [ball_y_margin] - 0.5*[ball_die_radius] -0.5*[size_1]
+
+[pos_x_21] = [ball_x_margin]  -0.5*[size_1]
+[pos_y_21] = [ball_y_margin] -1*[ball_die_radius] -0.5*[size_1]
+
+[pos_x_22] = [ball_x_margin] +0.259*([ball_die_radius]-[offset_2x]) -0.5*[size_2]
+[pos_y_22] = [ball_y_margin] -0.966*([ball_die_radius]-[offset_2y]) -0.5*[size_2]
+
+[pos_x_31] = [ball_x_margin] +0.866*[ball_die_radius] -0.5*[size_1]
+[pos_y_31] = [ball_y_margin] -0.5*[ball_die_radius] -0.5*[size_1]
+
+[pos_x_32] = [ball_x_margin] +0.866*([ball_die_radius]-[offset_2])-0.5*[size_2]
+[pos_y_32] = [ball_y_margin] -0.5*[size_2]
+
+[pos_x_33] = [ball_x_margin] +0.866*([ball_die_radius]-[offset_3])-0.5*[size_3]
+[pos_y_33] = [ball_y_margin] +0.5*([ball_die_radius]-[offset_3])-0.5*[size_3]
+
+[pos_x_41] = [ball_x_margin] +0.866*[ball_die_radius] -0.5*[size_1]
+[pos_y_41] = [ball_y_margin] +0.5*[ball_die_radius] -0.5*[size_1]
+
+[pos_x_42] = [ball_x_margin] +0.5*[ball_die_radius] -0.5*[size_2]
+[pos_y_42] = [ball_y_margin] +0.866*[ball_die_radius] -0.5*[size_2]
+
+[pos_x_51] = [ball_x_margin] -0.5*[size_1]
+[pos_y_51] = [ball_y_margin] + 1*[ball_die_radius] -0.5*[size_1]
+
+[tmp_1] = 50%
+[tmp_2] = 50%
+[tmp_size] = 10%
+
+;Filler labels
+[size_0] = 0
+[pos_x_00] = 0
+[pos_y_00] = 0
+
+[damage_size] = 13%
+[damage_distance] = 4%
+[damage_y_margin] = 100%-22%
+
+[l_damage_size] = 10%
+[l_damage_y_1] = 87%
+[l_damage_y_2] = 76%
+[l_damage_x_distance] = 4%
+[l_damage_x_11] = 50%-[l_damage_size]-[l_damage_x_distance]*0.5
+[l_damage_x_12] = 50%+[l_damage_x_distance]*0.5
+
+[l_damage_x_21] = 50%-[l_damage_size]*2.5-[l_damage_x_distance]*2
+[l_damage_x_22] = 50%-[l_damage_size]*1.5-[l_damage_x_distance]*1
+[l_damage_x_23] = 50%-[l_damage_size]*0.5
+[l_damage_x_24] = 50%+[l_damage_size]*0.5+[l_damage_x_distance]*1
+[l_damage_x_25] = 50%+[l_damage_size]*1.5+[l_damage_x_distance]*2
+
+[other_text_x] = 14%
+[other_text_y] = 66%
+[other_text_w] = 72%
+[other_text_height] =3
+[other_font] = [other_text_height] * 2.5
+
+[other_img_x] = 53%
+[other_img_y] = 37%
+[other_img_w] = 40%
+[other_img_h] = 35%
+
+[token_x] = 44%
+[token_y] = 1.5%
+[token_size] = 12%
+
+
+
+;trainer_tokens
+[dollar_x_pos] = 10%
+[dollar_y_pos] = 1%
+
+[dollar_height] = 4
+[dollar_font] = [Dollar_height] *2.5
+
+[hit_y_pos] = 3.5%
+
+[hit_height] = 2.5
+[hit_font] = [hit_height] *2.5
+
+;[heart_size_y] = 8%
+;[heart_size_x] = [heart_size_y] * 1.58
+
+
+[trainer_x_pos] = 70%
+[trainer_y_pos] = 35%
+[trainer_x_size] = 30%
+[trainer_y_size] = 30%
+
+[single_trainer_x_pos] = 70%
+[single_trainer_y_pos] = 35%
+[single_trainer_x_size] = 30%
+[single_trainer_y_size] = 30%
+
+[poke1_x_pos] = 10%
+[poke1_y_pos] = 15%
+[poke1_x_size] = 40%
+[poke1_y_size] = 40%
+
+[poke2_x_pos] = 37%
+[poke2_y_pos] = 15%
+[poke2_x_size] = 42%
+[poke2_y_size] = 42%
+
+[single_x_pos] = 13%
+[single_y_pos] = 15%
+[single_x_size] = 65%
+[single_y_size] = 65%
+
+
+[type_size_y] = 22%
+[type_size_x] = [type_size_y]*1.37
+
+[single_type_size_x] = [type_size_x]
+[single_type_size_y] = [type_size_y]
+
+[1_type_x_pos] = 10%
+[1_type_y_pos] = 49%
+
+[2_type_x_pos] = [1_type_x_pos] + [type_size_x] + 10%
+[2_type_y_pos] = [1_type_y_pos] + 6%
+
+[single_type_x_pos] = 40%
+[single_type_y_pos] = 62%
+
+[heart_y_offset] = 2%
+[heart_x_offset] = 0.3%
+[1_heart_x_pos] = [1_type_x_pos] + [heart_x_offset]
+[1_heart_y_pos] = [1_type_y_pos] + [heart_y_offset]
+
+[2_heart_x_pos] = [2_type_x_pos] + [heart_x_offset]
+[2_heart_y_pos] = [2_type_y_pos] + [heart_y_offset]
+
+
+[single_heart_x_pos] = [single_type_x_pos] + [heart_x_offset]
+[single_heart_y_pos] = [single_type_y_pos] + [heart_y_offset]
+
+[heart_size_x] = [type_size_y]
+[heart_size_y] = [heart_size_x] * 0.819
+
+
+[single_heart_size_x] = [single_type_size_y]
+[single_heart_size_y] = [single_heart_size_x] * 0.819
+
+
+[Damage_size_x] = 11.5%
+[Damage_size_y] = 11.5%
+
+[single_Damage_size_x] = [Damage_size_x]
+[single_Damage_size_y] = [Damage_size_y]
+
+[damage_margin] = [damage_size_x]*1.15
+[single_damage_margin] = [single_damage_size_x] * 1.15
+
+[type_damage_margin] = 1%
+
+[1_damage_y_pos] = [1_type_y_pos] + [type_size_y] + [type_damage_margin]
+[2_damage_y_pos] = [2_type_y_pos] + [type_size_y] + [type_damage_margin]
+[single_damage_y_pos] = [single_type_y_pos] + [single_type_size_y] + [type_damage_margin]
+
+[1_low_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2)
+[2_low_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2)
+
+[1_high1_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) -[damage_margin]/2
+[1_high2_damage_x_pos] = [1_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) +[damage_margin]/2
+
+[2_high1_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) -[damage_margin]/2
+[2_high2_damage_x_pos] = [2_type_x_pos] + ([type_size_x]/2)-([damage_size_x]/2) +[damage_margin]/2
+
+[single_low_damage_x_pos] = [single_type_x_pos] + [single_type_size_x]/2-([single_damage_size_x]/2)
+
+[single_high1_damage_x_pos] = [single_type_x_pos] + ([single_type_size_x]/2)-([single_damage_size_x]/2) -[single_damage_margin]/2
+[single_high2_damage_x_pos] = [single_type_x_pos] + ([single_type_size_x]/2)-([single_damage_size_x]/2) +[single_damage_margin]/2
+
+
+
+;extra_tokens
+
+
+[mystery_text_height] = 5.5
+[mystery_text_font] = [mystery_text_height]*1.5
+
+[front_mystery_img_x] = 15%
+[front_mystery_img_y] = 10%
+[front_mystery_img_w] = 100%-[front_mystery_img_x]*2
+[front_mystery_img_h] = 100% -[front_mystery_img_y]*2
+
+[front_2_mystery_img_x] = 30%
+[front_2_mystery_img_y] = 30%
+[front_2_mystery_img_w] = 100%-[front_2_mystery_img_x]*2
+[front_2_mystery_img_h] = 100% -[front_2_mystery_img_y]*2
+
+[mystery_text_x] = 11%
+[mystery_text_y] = 18%
+[mystery_text_w] = 100%-[mystery_text_x]*2
+[mystery_text_h] = 100%
+
+[mystery_name_text_y] = 40%
+
+[mystery_img_half_1_x] = 5%
+[mystery_img_half_1_y] = 25%
+[mystery_img_half_1_w] = 38%
+[mystery_img_half_1_h] = 100%-[mystery_img_half_1_y]*2
+
+[mystery_img_half_slash_x] = 40%
+[mystery_img_half_slash_y] = 27%
+[mystery_img_half_slash_w] = 20%
+[mystery_img_half_slash_h] = 100% -[mystery_img_half_slash_y]*2
+
+[mystery_img_half_2_x] = 58.5%
+[mystery_img_half_2_y] = 25%
+[mystery_img_half_2_w] = 35%
+[mystery_img_half_2_h] = 100%-[mystery_img_half_2_y]*2
+
+[mystery_trans] = 70
+
+;HM_tokens
+[HM_text_height] = 3.05
+[HM_text_font] = [HM_text_height]*2.5
+[HM_text_x] = 7%
+[HM_text_y] = 25%
+[HM_text_w] = 100%-2*[HM_text_x]+1%
+[mystery_symbol_height] = 3
+
+[HM_name_text_height] = 3.1
+[HM_name_text_font] = [HM_name_text_height]*2.5
+[HM_name_text_x] = 0%
+[HM_name_text_y] = -27%
+[HM_name_text_w] = 100%-2*[HM_name_text_x]
+
+[flip_range] = labelrange([flip],1)
+[col_0] = #ffffff
+
+[col_bronze] = #b08d57
+;[bronze]H=M#c58d57
+;[silver]_=t#d3d3d3
+;[silver]o=k#d3d3f2ens
+[col_bronze] = #b08d57
+[col_silver] = #d3d3ec
+[col_gold] = #fed600
+
+
+
+;[col_1] = #ffe600
+[col_Route_1] = #ffe600
+[col_vir] = #0f470d
+[col_cycling] = #8b006b
+[col_safari] = #b2d943
+[col_moon] = #d9b1ce
+[col_tunnel] = #553303
+[col_tower] = #490e73
+[col_islands] =#001e94
+;[col_legendary] = #ffc300
+[col_legendary] = #ff9600
+Rectangle = [extra_range],0,0,100%,100%, [col_[back_color_out]]
+
+[col_0] = #aaffee
+[col_1] = #ffe600
+[col_2] = #0f470d
+[col_3] = #caab7e
+
+
+[flip_y] = 70%
+[flip_s] = 23%
+[flip_x] = 50%-[flip_s]*0.5
+
+;HTMLsymbols
+HTMLIMAGE = , (Female), Symbols/Other/Female.png, [name_height],[name_height]*0.4,PB
+HTMLIMAGE = , (Male), Symbols/Other/Male.png, [name_height],[name_height]*0.55,PB
+
+HTMLIMAGE = , (Key), Symbols/Other/Key.png, [dollar_height]*0.8,[dollar_height]*0.8,PTM
+
+HTMLIMAGE = , (hm_flying), Symbols/Types/Vanilla/Flying.png, [mystery_symbol_height],[mystery_symbol_height],PB
+HTMLIMAGE = , (hm_grass), Symbols/Types/Vanilla/Grass.png,  [mystery_symbol_height],[mystery_symbol_height],PB
+HTMLIMAGE = , (hm_normal), Symbols/Types/Vanilla/Normal.png,  [mystery_symbol_height],[mystery_symbol_height],PB
+HTMLIMAGE = , (hm_water), Symbols/Types/Vanilla/water.png, [mystery_symbol_height],[mystery_symbol_height],PB
+
+HTMLIMAGE = , (die_flying), Symbols/Dice/dice_flying.png, [mystery_symbol_height],[mystery_symbol_height],PM
+HTMLIMAGE = , (die_water), Symbols/Dice/dice_water.png, [mystery_symbol_height],[mystery_symbol_height],PM
+HTMLIMAGE = , (die_normal), Symbols/Dice/dice_normal.png, [mystery_symbol_height],[mystery_symbol_height],PM
+HTMLIMAGE = , (die_grass), Symbols/Dice/dice_grass.png, [mystery_symbol_height],[mystery_symbol_height],PM
+
+HTMLIMAGE = , (tree), Symbols/other/tree.png,[mystery_symbol_height],[mystery_symbol_height],PM
+
+htmlfont=base,Ubuntu,[Name_font],BI,#000000,center
+
+
+HTMLText = [all],[Name],[name_x_margin], [name_y_margin], 100%, [Name_height],#FFFFFF,0,T,100,base
+
+Image = [all], [pokemon_image], [image_x_margin], [image_y_margin], [image_x_size],[image_y_size],0,TP
+
+FONT=Ubuntu,[other_font],T,#000000
+;If = (1=1)
+If = ([Background] = "Starter") _OR_ ([Background] = "Shop") _OR_ ([Background] = "Dojo")
+    Text = [all], [other_text],[other_text_x], [other_text_y], [other_text_w],30%
+    Image= [all], [other_img], [other_img_x], [other_img_y], [other_img_w],[other_img_h],0,PT
+    ;Text = [all], [Background],[other_text_x], [other_text_y], [other_text_w], 100%
+ELse
+    ;Image= [all], [ball_img_1], [size_[ball_1_size]],  [pos_y_[ball_1_size][ball_1_start]],10%,10%,0,PT
+
+    If= ([ball_type_1]<>0)
+        Image= [all], [ball_img_1], [pos_x_[start_size_1]], [pos_y_[start_size_1]],[size_[ball_1_size]],[size_[ball_1_size]],0,PT,[ball_trans]
+    Endif
+    If= ([ball_type_2]<>0)
+        Image= [all], [ball_img_2], [pos_x_[start_size_2]], [pos_y_[start_size_2]],[size_[ball_2_size]],[size_[ball_2_size]],0,PT,[ball_trans]
+    Endif
+    If= ([ball_type_3]<>0)
+        Image= [all], [ball_img_3], [pos_x_[start_size_3]], [pos_y_[start_size_3]],[size_[ball_3_size]],[size_[ball_3_size]],0,PT,[ball_trans]
+    Endif
+    If= ([ball_type_4]<>0)
+        Image= [all], [ball_img_4], [pos_x_[start_size_4]], [pos_y_[start_size_4]],[size_[ball_4_size]],[size_[ball_4_size]],0,PT,[ball_trans]
+    Endif
+    If= ([ball_type_5]<>0)
+        Image= [all], [ball_img_5], [pos_x_[start_size_5]], [pos_y_[start_size_5]],[size_[ball_5_size]],[size_[ball_5_size]],0,PT,[ball_trans]
+    Endif
+    If= ([ball_type_6]<>0)
+        ;Image= [all], [ball_img_6], [pos_x_[Ball_6_start][ball_6_size]], [pos_y_[Ball_6_start][ball_6_size]],[size_[ball_6_size]],[size_[ball_6_size]],0,PT,[ball_trans]
+        ;Image= [all], [ball_img_6], [pos_x_[tmp][ball_6_size]], [pos_y_[tmp][ball_6_size]],[size_[ball_6_size]],[size_[ball_6_size]],0,PT,[ball_trans]
+        Image= [all], [ball_img_6], [pos_x_[start_size_6]], [pos_y_[start_size_6]],[size_[ball_6_size]],[size_[ball_6_size]],0,PT,[ball_trans]
+    Endif
+
+
+    Image = [all], [Die_6], [ball_1_x], [ball_1_y], [die_size],[die_size],0,TP,[die_trans]
+    Image = [all], [Die_5], [ball_1_x], [ball_2_y], [die_size],[die_size],0,TP,[die_trans]
+    Image = [all], [Die_4], [ball_2_x], [ball_3_y], [die_size],[die_size],0,TP,[die_trans]
+    Image = [all], [Die_3], [ball_3_x], [ball_2_y], [die_size],[die_size],0,TP,[die_trans]
+    Image = [all], [Die_2], [ball_3_x], [ball_1_y], [die_size],[die_size],0,TP,[die_trans]
+    Image = [all], [Die_1], [ball_2_x], [ball_4_y], [die_size],[die_size],0,TP,[die_trans]
+ENDif
+
+If= ([legendary] = 1)
+    Image= [all], [sym_dmg_1], [l_damage_x_11], [l_damage_y_1],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_2], [l_damage_x_12], [l_damage_y_1],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_3], [l_damage_x_21], [l_damage_y_2],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_4], [l_damage_x_22], [l_damage_y_2],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_5], [l_damage_x_23], [l_damage_y_2],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_6], [l_damage_x_24], [l_damage_y_2],[l_damage_size],[l_damage_size],0,TP
+    Image= [all], [sym_dmg_7], [l_damage_x_25], [l_damage_y_2],[l_damage_size],[l_damage_size],0,TP
+
+    Image =[all], [tmp_token],[token_x],[token_y], [token_size],[token_size],0,TP
+    ;Image =[all], [tmp_token],0,0, 100%,100%,0,TP
+ELse
+    If= ([n_damage] = 3)
+    Image= [all], [sym_dmg_1], 50%-[damage_size]*1.5-[damage_distance], [damage_y_margin],[damage_size],[damage_size],0,TP
+    Image= [all], [sym_dmg_2], 50%-[damage_size]*0.5, [damage_y_margin],[damage_size],[damage_size],0,TP
+    Image= [all], [sym_dmg_3], 50%+[damage_size]*0.5+[damage_distance], [damage_y_margin],[damage_size],[damage_size],0,TP
+
+    ElseIf= ([n_damage] = 2)
+    Image= [all], [sym_dmg_1], 50%-[damage_size]-[damage_distance]*0.5, [damage_y_margin],[damage_size],[damage_size],0,TP
+    Image= [all], [sym_dmg_2], 50%+[damage_distance]*0.5, [damage_y_margin],[damage_size],[damage_size],0,TP
+
+    ElseIf= ([n_damage] = 1)
+    Image= [all], [sym_dmg_1], 50%-[damage_size]/2, [damage_y_margin],[damage_size],[damage_size],0,TP
+
+    Endif
+ENDif
+
+
+;trainer_tokens
+if = ([n_pokemons] = 1)
+    Image = [all], [trainer_image], [single_trainer_x_pos], [single_trainer_y_pos], [single_trainer_x_size],[single_trainer_y_size],0,TP
+
+    Image = [all], [poke_image_1], [single_x_pos], [single_y_pos], [single_x_size],[single_y_size],0,TP
+
+    image = [all], [type_1_image], [single_type_x_pos], [single_type_y_pos], [single_type_size_x], [single_type_size_y],0,TP
+    if = ([n_damage_1] = 1)
+        image = [all], [Damage_1_1],[single_low_damage_x_pos],[single_damage_y_pos],[single_damage_size_x],[single_damage_size_y],0,TP
+    elseif = ([n_damage_1] = 2)
+        image = [all], [Damage_1_1],[single_high1_damage_x_pos],[single_damage_y_pos],[single_damage_size_x],[single_damage_size_y],0,TP
+        image = [all], [Damage_1_2],[single_high2_damage_x_pos],[single_damage_y_pos],[single_damage_size_x],[single_damage_size_y],0,TP
+    Endif
+    image = [all],[health_1_img],[single_heart_x_pos],[single_heart_y_pos],[single_heart_size_x],[single_heart_size_y],0,TP
+elseif = ([n_pokemons] = 2)
+    Image = [all], [trainer_image], [trainer_x_pos], [trainer_y_pos], [trainer_x_size],[trainer_y_size],0,TP
+
+    Image = [all], [poke_image_1], [poke1_x_pos], [poke1_y_pos], [poke1_x_size],[poke1_y_size],0,TP
+    Image = [all], [poke_image_2], [poke2_x_pos], [poke2_y_pos], [poke2_x_size],[poke2_y_size],0,TP
+
+    image = [all], [type_1_image], [1_type_x_pos], [1_type_y_pos], [type_size_x], [type_size_y],0,TP
+    if = ([n_damage_1] = 1)
+        image = [all], [Damage_1_1],[1_low_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    elseif = ([n_damage_1] = 2)
+        image = [all], [Damage_1_1],[1_high1_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+        image = [all], [Damage_1_2],[1_high2_damage_x_pos],[1_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    endif
+    image = [all],[health_1_img],[1_heart_x_pos],[1_heart_y_pos],[heart_size_x],[heart_size_y],0,TP
+
+    image = [all], [type_2_image], [2_type_x_pos], [2_type_y_pos], [type_size_x], [type_size_y],0,TP
+    if = ([n_damage_2] = 1)
+        image = [all], [Damage_2_1],[2_low_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    elseif = ([n_damage_2] = 2)
+        image = [all], [Damage_2_1],[2_high1_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+        image = [all], [Damage_2_2],[2_high2_damage_x_pos],[2_damage_y_pos],[damage_size_x],[damage_size_y],0,TP
+    endif
+    image = [all],[health_2_img],[2_heart_x_pos],[2_heart_y_pos],[heart_size_x],[heart_size_y],0,TP
+
+
+Endif
+[html_x_pos] = 30%
+FONT=Ubuntu,[dollar_font],TIB,#000000
+
+if= ([Extra_reward]="")
+    Text = [all], [Money_output],[dollar_x_pos], [dollar_y_pos], 100%-[dollar_x_pos]*2, [dollar_height]
+elseif = ([Extra_reward] = "Key")
+    HTMLText = [all], <p>[Money_output] / (key)</p>,[html_x_pos], [dollar_y_pos]+2%, 100%-[dollar_x_pos]*2, [dollar_height],,0,T
+elseif = ([Extra_reward] = "Hitmonchan")
+    FONT=Ubuntu,[hit_font],TIB,#000000
+    Text = [all], Hitmonlee  ,[dollar_x_pos], [hit_y_pos]+1%, 100%-[dollar_x_pos]*2, [hit_height],Center
+    Text = [all], / Hitmonchan ,[dollar_x_pos], [hit_y_pos]+1%+[hit_height]*0.8, 100%-[dollar_x_pos]*2, [hit_height],Center
+
+Endif
+
+
+
+
+
+
+
+;EXTRA
+
+
+
+
+
+image = [extra_range],[mystery_entire],0,0,100%,100%,0,P
+
+image = [extra_range],[mystery_front_img],[front_mystery_img_x],[front_mystery_img_y],[front_mystery_img_w],[front_mystery_img_h],0,PT
+image = [extra_range],[mystery_front_img_2],[front_2_mystery_img_x],[front_2_mystery_img_y],[front_2_mystery_img_w],[front_2_mystery_img_h],0,PT
+image = [extra_range],[mystery_img_back],[front_mystery_img_x],[front_mystery_img_y],[front_mystery_img_w],[front_mystery_img_h],0,PT,[mystery_trans]
+
+image = [extra_range],[Mystery_img_half_1],[Mystery_img_half_1_x],[Mystery_img_half_1_y],[Mystery_img_half_1_w],[Mystery_img_half_1_h],0,PT
+image = [extra_range],[Mystery_img_half_slash],[Mystery_img_half_slash_x],[Mystery_img_half_slash_y],[Mystery_img_half_slash_w],[Mystery_img_half_slash_h],0,PT
+image = [extra_range],[Mystery_img_half_2],[Mystery_img_half_2_x],[Mystery_img_half_2_y],[Mystery_img_half_2_w],[Mystery_img_half_2_h],0,PT
+
+
+
+;image = [extra_range],[Mystery_img_half_2],0,0,100%,100%,0,P
+HTMLFONT=mystery_font,arial,[mystery_text_font],B,#000000,Center
+
+HTMLFONT=HM_name_font,arial,[HM_name_text_font],B,#000000,Center
+;if = ([HM_text] > "")
+HTMLTEXT = [extra_range],<p><HM_name_font>[HM_name_gain]</HM_name_font></p>, 0,[hm_name_text_y],100%,100%,#FFFFFF,0,T,100,HM_name_font
+HTMLTEXT = [extra_range],<p><HM_name_font> <br>[HM_name]</hm_name_font></p>, [HM_name_text_x], [HM_name_text_y], [HM_name_text_w], 100%,#FFFFFF,0,T,100,HM_name_font
+;Endif
+HTMLFONT=HM_font,arial,[HM_text_font],,#000000,Center
+HTMLTEXT = [extra_range], [HM_text], [HM_text_x], [HM_text_y], [HM_text_w], 100%,#FFFFFF,0,T,100,HM_font
+;HTMLtext= [extra_range],[HM_text],[mystery_text_x],5%,[mystery_text_w],[mystery_text_h],#FFFFFF,0,T,100,mystery_font
+
+
+HTMLtext= [extra_range],[mystery_text],[mystery_text_x],[mystery_text_y],[mystery_text_w],[mystery_text_h],#FFFFFF,0,T,100,mystery_font
+HTMLtext= [extra_range],[mystery_name_text],0,[mystery_name_text_y],100%,15%,#FFFFFF,0,T,100,mystery_font
+
+
+Image = [flip_range],"Symbols/other/flip.png",[flip_x],[flip_y],[flip_s],[flip_s],0,TP
+
+
+
+;Rectangle = [back_color_range],0,0,100%,100%, [col_[tmp2]]
+
+
+;Display = "decks/med_tokens/pokemon/starter.png",1,4
+Display = "decks/med_tokens/pokemon/route_1.png",5,12
+Display = "decks/med_tokens/pokemon/vir.png",13,20
+Display = "decks/med_tokens/pokemon/bic.png",21,28
+Display = "decks/med_tokens/pokemon/saf.png",29,38
+Display = "decks/med_tokens/pokemon/moon.png",39,46
+Display = "decks/med_tokens/pokemon/rock.png",47,54
+Display = "decks/med_tokens/pokemon/tower.png",54,62
+Display = "decks/med_tokens/pokemon/islands.png",63,71
+;Display = "decks/med_tokens/pokemon/porygon.png",72,72
+;Display = "decks/med_tokens/pokemon/dojo.png",73,76
+;Display = "decks/med_tokens/pokemon/legendary.png",75,80
+;Display = "decks/med_tokens/trainers/weak.png",80,85
+;Display = "decks/med_tokens/trainers/mid.png",86,89
+;Display = "decks/med_tokens/trainers/strong.png",90,93
+;Display = "decks/med_tokens/trainers/bug.png",80,80
+;Display = "decks/med_tokens/trainers/pick.png",81,81
+;Display = "decks/med_tokens/trainers/lass.png",82,82
+;Display = "decks/med_tokens/trainers/young.png",83,83
+;Display = "decks/med_tokens/trainers/fish.png",84,84
+;Display = "decks/med_tokens/trainers/bike.png",85,85
+;Display = "decks/med_tokens/trainers/juggler.png",86,86
+;Display = "decks/med_tokens/trainers/nerd.png",87,87
+;Display = "decks/med_tokens/trainers/gent.png",88,88
+;Display = "decks/med_tokens/trainers/hiker.png",89,89
+;Display = "decks/med_tokens/trainers/swim.png",90,90
+;Display = "decks/med_tokens/trainers/jessie.png",91,91
+;Display = "decks/med_tokens/trainers/chan.png",92,92
+;Display = "decks/med_tokens/trainers/james.png",93,93
+;Display = "decks/med_tokens/trainers/black.png",94,94
+;Display = "decks/med_tokens/other/mystery.png",95,110
+;Display = "decks/med_tokens/other/mystery_back.png",111,111
+;Display = "decks/med_tokens/other/types.png",112,127
+;Display = "decks/med_tokens/other/types_back.png",128,128
+;Display = "decks/med_tokens/pokemon/starter_back.png",129,129
+;Display = "decks/med_tokens/pokemon/porygon_back.png",130,130
+;Display = "decks/med_tokens/pokemon/dojo_back.png",131,131
+;Display = "decks/med_tokens/trainers/route_1_back.png",132,132
+;Display = "decks/med_tokens/trainers/vir_back.png",133,133
+;Display = "decks/med_tokens/trainers/bic_back.png",134,134
+;Display = "decks/med_tokens/trainers/saf_back.png",135,135
+;Display = "decks/med_tokens/trainers/moon_back.png",136,136
+;Display = "decks/med_tokens/trainers/rock_back.png",137,137
+;Display = "decks/med_tokens/trainers/tower_back.png",138,138
+;Display = "decks/med_tokens/trainers/islands_back.png",139,139
+;Display = "decks/med_tokens/pokemon/legendary_back.png",140,140
+;Display = "decks/med_tokens/pokemon/route_1_back.png",141,141
+;Display = "decks/med_tokens/pokemon/vir_back.png",142,142
+;Display = "decks/med_tokens/pokemon/bic_back.png",143,143
+;Display = "decks/med_tokens/pokemon/saf_back.png",144,144
+;Display = "decks/med_tokens/pokemon/moon_back.png",145,145
+;Display = "decks/med_tokens/pokemon/rock_back.png",146,146
+;Display = "decks/med_tokens/pokemon/tower_back.png",147,147
+;Display = "decks/med_tokens/pokemon/islands_back.png",148,148
+;Display = "decks/med_tokens/other/hm.png",149,152
+;Display = "decks/med_tokens/other/hm_back.png",152,152
+;[backs] = rangemul(129,4,141,8,142,8,143,8,144,10,145,8,146,7,147,9,148,9,130,1,131,2,140,5,133,2,132,2,134,2,136,2,137,2,139,2,138,2,111,16,112,1,114,1,116,1,118,1,120,1,122,1,124,1,126,1,152,3,153,17)
+;Duplex ="1-4,5-12,13-20,21-28,29-38,39-46,47-53,54-62,63-71,72,73-74,75-79,80-81,82-83,84-85,86-87,88-89,90-91,92-93,95-110,112,114,116,118,120,122,124,126,149-151,153-169",[backs]
+;print= Duplex
+
+;Display = "decks/mystery/mystery_back.png",17,17
+;Display = "decks/med_tokens/trainers/bronze.png", 170,170
+;Display = "decks/med_tokens/trainers/silver.png", 171,171
+;Display = "decks/med_tokens/trainers/gold.png", 172,172
+;ELLIPSE=, 0, 0, [card_width], [card_height], #000000, Empty,[grid_thickness]
+
+;BLEED = [All], 1, 1, 10, 10
+
+BORDER = NONE
+;BORDER = RECTANGLE, #FFFFFF,3,SOLID
+
+
+zoom = 100
