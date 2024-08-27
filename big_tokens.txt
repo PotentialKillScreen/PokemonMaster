@@ -1,5 +1,5 @@
-LINK = "Gyms.ods!sheet1"
-LINK = "Gyms.ods!sheet2"
+LINK = "big_tokens.ods!sheet1"
+LINK = "big_tokens.ods!sheet2"
 ;Settings
 UNIT = MM
 PAGE = 210,297, PORTRAIT
