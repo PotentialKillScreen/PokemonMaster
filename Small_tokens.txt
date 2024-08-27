@@ -1,5 +1,5 @@
 Linkmulti = amount
-LINK = "small_tokens_2.ods"
+LINK = "small_tokens.ods"
 
 UNIT = MM
 PAGE = 210,297, PORTRAIT
