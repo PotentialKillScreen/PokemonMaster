@@ -1,5 +1,5 @@
 LinkMulti = Amount
-LINK = "Pokemon_cards2.ods!Pokemon_cards_1"
+LINK = "Pokemon_cards.ods!Pokemon_cards_1"
 ;LINK = "troubleshooting.ods"
 ;Settings
 UNIT = MM
@@ -988,7 +988,7 @@ HTMLTEXT= [all], <p> [NAME_1_out] </p>,[frame_thickness]+[text_x_offset],[frame_
 
 RECTANGLE = [all], 0,[frame_height_3],[league_frame_thickness],100%,#000000
 RECTANGLE = [all], 0,100%-[league_frame_thickness],100%,[league_frame_thickness],#000000
-;Pokémon league info
+;PokÃ©mon league info
 FONT=Ubuntu,[attack_font],TB,#000000
 TEXT = [all], [speed_texts],[frame_thickness]+[text_x_offset],[frame_height_3]+[frame_speed_offset], 100%,[attack_font_height],Left
 
