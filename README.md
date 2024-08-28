@@ -16,7 +16,7 @@ This includes
 
 Also included are images of the final product, including the board, box, cards, tokens and other miscellaneous stuff.
 
-Finally the current version of the [rulebook](https://github.com/PotentialKillScreen/PokemonMaster/blob/main/Rules.pdf) is included, though it is written for the creator and not pedagogical enough to teach effiencently teach the game to a beginner.
+Finally, the current version of the [rulebook](https://github.com/PotentialKillScreen/PokemonMaster/blob/main/Rules.pdf) is included, though it is tailored for the creator and is not clear or detailed enough to effectively teach the game to a beginner.
 
 ### Method
 I have used the program nanDeck to automate the creation of the cards and the tokens of the game. This means that instead of making an image for each card and token I instead write code
@@ -28,8 +28,8 @@ This includes creating an earlier version and playtesting it with friends.
 My vision for the game was to create an advanced board game with the theme of Pokémon.
 The Pokémon Company's products are mostly aimed at children which I believe is a shame since a big portion of the kids that grew up with Pokémon are now grown up.
 
-I am quite happy with the final product and my friends seem to like the game slighly more than the average game I own. I would make the following points when comparing the game with top ranked games on gameboardgeek.
-- Pokémon Master is more unwieldly. It works well when I am present but I can imagine that playing the game without an expert could be challenging.
+I am quite happy with the final product and my friends seem to like the game slightly more than the average game I own. I would make the following points when comparing the game with top ranked games on gameboardgeek.
+- Pokémon Master is more unwieldy. It works well when I am present but I can imagine that playing the game without an expert could be challenging.
 - The game is more thematic and the theme is greatly appreciated.
 - The strategic decisions are about as interesting.
 
